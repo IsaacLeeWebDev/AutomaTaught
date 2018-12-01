@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Projects_List from './Projects_List.jsx';
+import {
+  Grid, Row, Col, PageHeader
+} from 'react-bootstrap';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,10 +29,11 @@ class App extends React.Component {
   }
 
   render () {
-    return (<div>
-      <h1>Hello World!</h1>
+    return (
+    <Grid>
+      <PageHeader>Welcome to MVPro!</PageHeader>
       <Projects_List items={this.state.items}/>
-    </div>)
+    </Grid>)
   }
 }
 

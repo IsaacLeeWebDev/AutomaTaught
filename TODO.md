@@ -38,6 +38,11 @@
       - [X] PUT item (JUST AN OUTLINE!)
   - [ ] Client/src/components
     - [ ] Create a file for all the components you need
+    - [ ] Complete a rough version the components needed to get a project by ID
+      - [ ] App.jsx
+      - [ ] Projects_List.jsx
+      - [ ]
+  -[ ] Test your GET USER
     - [ ] Generate 100 primary records
     - [ ] Seed MongoDB
     - [ ] test GET user
