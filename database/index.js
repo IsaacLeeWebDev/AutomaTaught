@@ -48,10 +48,28 @@ const getAllProjects = function(callback) {
   });
 };
 
+// const putProject = function(callback) {
+//   Project.findOneAndUpdate({}, function(err, users) {
+//     if(err) {
+//       callback(err, null);
+//     } else {
+//       callback(null, users);
+//     }
+//   });
+// };
 
+// const putTicket = function(callback) {
+//   Project.findOneAndUpdate({}, function(err, users) {
+//     if(err) {
+//       callback(err, null);
+//     } else {
+//       callback(null, users);
+//     }
+//   });
+// };
 
 const methods = {
-  // getAllProjects,
+  getAllProjects,
   // putProject,
   // putTicket,
 }

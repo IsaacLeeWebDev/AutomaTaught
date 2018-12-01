@@ -9,7 +9,7 @@ const port = 9999;
 app.use(express.static(__dirname + '/../client/public'));
 
 app.get('/projects', function (req, res) {
-  Models.getAllUsers(function(err, data) {
+  Models.getAllProjects(function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {
@@ -19,7 +19,7 @@ app.get('/projects', function (req, res) {
 });
 
 app.get('/projects/:projectId', function (req, res) {
-  Models.getAllProjects(function(err, data) {
+  Models.getProject(function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {
