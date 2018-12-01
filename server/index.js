@@ -1,15 +1,15 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var Users = require('../database/index.js');
+var Models = require('../database/index.js');
 
 var app = express();
-
+const port = 9999;
 // UNCOMMENT FOR REACT
 app.use(express.static(__dirname + '/../client/public'));
 
-app.get('/users', function (req, res) {
-  Users.selectAll(function(err, data) {
+app.get('/projects', function (req, res) {
+  Models.getAllUsers(function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {
@@ -18,6 +18,47 @@ app.get('/users', function (req, res) {
   });
 });
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.get('/projects/:projectId', function (req, res) {
+  Models.getAllProjects(function(err, data) {
+    if(err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+// app.get('/users/:userId/:projectId', function (req, res) {
+//   Models.getAllUsers(function(err, data) {
+//     if(err) {
+//       res.sendStatus(500);
+//     } else {
+//       res.json(data);
+//     }
+//   });
+// });
+
+// app.put('/users/:userId/:projectId', function (req, res) {
+//   Models.getAllUsers(function(err, data) {
+//     if(err) {
+//       res.sendStatus(500);
+//     } else {
+//       res.json(data);
+//     }
+//   });
+// });
+
+// app.put('/users/:userId/:projectId/:ticketId', function (req, res) {
+//   Models.getAllUsers(function(err, data) {
+//     if(err) {
+//       res.sendStatus(500);
+//     } else {
+//       res.json(data);
+//     }
+//   });
+// });
+
+
+app.listen(port, function() {
+  console.log(`listening on port ${port}!`);
 });

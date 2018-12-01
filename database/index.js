@@ -1,8 +1,8 @@
 // Todo: set up schema
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/mvpro');
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 db.on('error', function() {
   console.log('mongoose connection error');
@@ -12,40 +12,34 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var userSchema = mongoose.Schema({
+const projectSchema = mongoose.Schema({
   _id: Number,
-  username: String,
-  projects: [
+  title: String,
+  description: String,
+  createdAt: Date,
+  deadline: Date,
+  tickets: [
     {
       id: Number,
       title: String,
-      description: String,
-      createdAt: Date,
-      deadline: Date,
-      tickets: [
-        {
-          id: Number,
-          title: String,
-          body: String,
-          createdAt: {
-            type: Date,
-            default: Date.now
-          },
-          completionState: Boolean,
-          ticketType: {
-            type: String,
-            default: 'defaultTicket'
-          },
-        },
-      ],
+      body: String,
+      createdAt: {
+        type: Date,
+        default: Date.now
+      },
+      completionState: Boolean,
+      ticketType: {
+        type: String,
+        default: 'defaultTicket'
+      },
     },
   ],
 });
 
-var User = mongoose.model('User', userSchema);
+const Project = mongoose.model('Project', projectSchema);
 
-var selectAll = function(callback) {
-  User.find({}, function(err, users) {
+const getAllProjects = function(callback) {
+  Project.find({}, function(err, users) {
     if(err) {
       callback(err, null);
     } else {
@@ -54,4 +48,12 @@ var selectAll = function(callback) {
   });
 };
 
-module.exports.selectAll = selectAll;
+
+
+const methods = {
+  // getAllProjects,
+  // putProject,
+  // putTicket,
+}
+
+module.exports = methods;
