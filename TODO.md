@@ -13,6 +13,11 @@
 
 ## FEATURES
 
+- [X] Fill out starter repo
+  - [X] configure db
+  - [X] configure component names
+  - [X] run build and start
+
 - [ ] Set up database
   - [ ] Models
     - [ ] Users
@@ -23,3 +28,4 @@
     - [ ] Put user
     - [ ] Put project
     - [ ] Put item
+-
