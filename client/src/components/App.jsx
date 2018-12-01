@@ -5,28 +5,29 @@ import Projects_List from './Projects_List.jsx';
 import {
   Grid, Row, Col, PageHeader
 } from 'react-bootstrap';
+import projects from '../../../testProjects.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      items: projects
     }
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/projects',
-      success: (data) => {
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
+  // componentDidMount() {
+  //   $.ajax({
+  //     url: '/projects',
+  //     success: (data) => {
+  //       this.setState({
+  //         items: data
+  //       })
+  //     },
+  //     error: (err) => {
+  //       console.log('err', err);
+  //     }
+  //   });
+  // }
 
   render () {
     return (

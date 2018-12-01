@@ -1,0 +1,26 @@
+body {
+  background-color: #222;
+}
+
+h1 {
+  color: white;
+}
+.your_projects {
+  color: #baefff;
+}
+
+.well {
+  border-radius: 0;
+  border-color: black;
+  background-color: black
+}
+
+.project_li {
+  color: white;
+  background-color: black;
+  border-color: #222;
+}
+
+.project_li_details {
+  background-color: #ffffff;
+}
