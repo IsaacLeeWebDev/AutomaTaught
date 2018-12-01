@@ -37,4 +37,6 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
+
+// stretch goal: Timers on everything.
