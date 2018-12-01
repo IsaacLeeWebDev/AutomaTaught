@@ -15,18 +15,18 @@ Ever heard these thoughts in your head during an MVP Project?
 
   "Yeah, I'll just timebox this... right after I... uh..."
 
-  (  "Wait, where was that stackoverflow article I needed for this one ticket?" )
+  ( "Wait, where was that stackoverflow article I needed for this one ticket?" )
 
-  (  "Wait, where am I supposed to submit this deliverable again?" )
+  ( "Wait, where am I supposed to submit this deliverable again?" )
 
-  (  "Did I forget to check one of the many sources of information on this deliverable?" )
+  ( "Did I forget to check one of the many sources of information on this deliverable?" )
 
 MVPro saves you from these nightmares by providing a straightforward, opinionated workflow generator which puts your deliverables in one place, and in order!
 
 > "Well, I'm still working on this project, and I don't have really anything valuable written yet, but at least I've got something on the page!"
   --Isaac Lee, Creator of MVPro
 
-### How to get MVPro
+### How to get MVPro in 10 easy steps
 1. Open a terminal window
 2. Fork and clone this repo
 3. Navigate to the repo you just cloned
