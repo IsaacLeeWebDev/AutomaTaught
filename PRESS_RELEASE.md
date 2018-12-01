@@ -32,8 +32,8 @@ MVPro saves you from these nightmares by providing a straightforward, opinionate
 3. Navigate to the repo you just cloned
 4. run "npm install" and wait for it to complete
 5. run "npm run build" and wait for that to complete
-6. run "npm start" and wait for the message "Listening on port 3000 !"
-7. go to localhost:3000 on your browser
+6. run "npm start" and wait for the message "Listening on port 9999 !"
+7. go to localhost:9999 on your browser
 8. You did it
 9. There's no more steps
 10.
