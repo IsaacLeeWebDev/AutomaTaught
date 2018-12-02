@@ -18,7 +18,7 @@ class Create_Project_Form extends React.Component {
 
   changeView() {
     if (view === 0) {
-      <
+
     }
   }
 
@@ -27,3 +27,4 @@ class Create_Project_Form extends React.Component {
 export default Create_Project_Form;
 
 // stretch goal: Form validation
+// stretch goal: Personalized look
