@@ -1,5 +1,5 @@
-// Todo: set up schema
 const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/mvpro');
 
 const db = mongoose.connection;
@@ -38,28 +38,30 @@ const projectSchema = mongoose.Schema({
 
 const Project = mongoose.model('Project', projectSchema);
 
-const getAllProjects = function(callback) {
-  Project.find({}, function(err, users) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, users);
-    }
-  });
+const getAllProjects = () => {
+  Project.find({});
 };
 
-// const putProject = function(callback) {
-//   Project.findOneAndUpdate({}, function(err, users) {
-//     if(err) {
-//       callback(err, null);
-//     } else {
-//       callback(null, users);
-//     }
-//   });
-// };
+const putProject = (project, callback) => {
+  console.log('Should say a number and then \'string\' >>>>> ', project._id, typeof project._id);
+  Project.findOneAndUpdate(
+    {"_id": parseInt(project._id)},
+    project,
+    {"upsert": true},
+    (err, users) => {
+      if(err) {
+        callback(err, null);
+      } else {
+        callback(null, users);
+      }
+    }
+  );
+};
 
-// const putTicket = function(callback) {
-//   Project.findOneAndUpdate({}, function(err, users) {
+const seedProjects = (projects, callback) => Project.insertMany(projects);
+
+// const putTicket = (project, ticket, callback) => {
+//   Project.findOneAndUpdate({}, (err, users) => {
 //     if(err) {
 //       callback(err, null);
 //     } else {
@@ -70,7 +72,7 @@ const getAllProjects = function(callback) {
 
 const methods = {
   getAllProjects,
-  // putProject,
+  putProject,
   // putTicket,
 }
 
