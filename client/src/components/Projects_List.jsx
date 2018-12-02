@@ -15,7 +15,7 @@ const Projects_List = (props) => (
       </Col>
     </Row>
     <Well bsSize="large">
-      { props.items.map(item => <Projects_List_Item key={item.id} item={item}/>) }
+      { props.items.map(item => <Projects_List_Item key={item._id} item={item}/>) }
     </Well>
   </div>
 );
