@@ -16,6 +16,8 @@
 - [ ] SETUP ROUND
 - [X] Fill out starter repo
   - [X] configure db
+    - [X] Use MongoDB Promises
+    - [X] Rename the Model
   - [X] rename the default components.
   - [X] configure webpack
   - [X] run build and start
@@ -23,12 +25,14 @@
 - [ ] ITERATION 1:
   - [ ] Database
     - [ ] Models:
-      - [X] Users (CREATE THE WHOLE SCHEMA)
+      - [X] Projects rewrite the schema
     - [X] Model methods
       - [X] GET project
       - [X] PUT project (JUST AN OUTLINE!)
       - [X] PUT ticket (JUST AN OUTLINE!)
     - [ ] insert a couple records to MongoDB directly through the mongo shell
+        - [X] Create fake projects
+        - [ ] Create insertMany script
       - [ ] Create a js file that will hold a couple db.insertOne invokations with sample objects
       - [ ] Fill out that json file.
   - [X] Server
@@ -42,15 +46,16 @@
       - [ ] App.jsx
       - [ ] Projects_List.jsx
       - [ ] Projects_List_ticket.jsx
+
+
+- [ ] ITERATION 2:
   -[ ] Test your GET USER
     - [ ] Generate 100 primary records
     - [ ] Seed MongoDB
     - [ ] test GET user
-
-- [ ] ITERATION 2:
-    - [ ] Database
+  - [ ] Database
     - [ ] Models:
-      - [X] Users (CREATE THE WHOLE SCHEMA)
+      - [X] Projects (CREATE THE WHOLE SCHEMA)
     - [X] Model methods
       - [ ] Finish GET project
       - [X] Finish PUT project (JUST AN OUTLINE!)
