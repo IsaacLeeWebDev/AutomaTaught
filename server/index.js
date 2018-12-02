@@ -8,54 +8,22 @@ const port = 9999;
 // UNCOMMENT FOR REACT
 app.use(express.static(__dirname + '/../client/public'));
 
-app.get('/projects', function (req, res) {
-  Models.getAllProjects(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+app.get('/api/projects', function (req, res) {
+  Models.getAllProjects()
+  .then(data => res.json(data))
+  .catch(err => res.sendStatus(500));
 });
 
-app.get('/projects/:projectId', function (req, res) {
-  Models.getProject(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+app.get('/api/projects/:projectId', function (req, res) {
+  Models.getProject(req.params.projectId)
+  .then(data => res.json(data))
+  .catch(err => res.sendStatus(500));
 });
 
-// app.get('/users/:userId/:projectId', function (req, res) {
-//   Models.getAllUsers(function(err, data) {
-//     if(err) {
-//       res.sendStatus(500);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
-// app.put('/users/:userId/:projectId', function (req, res) {
-//   Models.getAllUsers(function(err, data) {
-//     if(err) {
-//       res.sendStatus(500);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
-// app.put('/users/:userId/:projectId/:ticketId', function (req, res) {
-//   Models.getAllUsers(function(err, data) {
-//     if(err) {
-//       res.sendStatus(500);
-//     } else {
-//       res.json(data);
-//     }
-//   });
+// app.put('/api/projects/:projectId/:ticketId', function (req, res) {
+  // Models.getProject(req.params.projectId, req.params.ticketId)
+  // .then(data => res.json(data))
+  // .catch(err => res.sendStatus(500));
 // });
 
 
