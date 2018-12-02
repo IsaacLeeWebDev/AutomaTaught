@@ -8,7 +8,8 @@
     "build": "webpack",
     "dev": "webpack --watch",
     "start:dev": "nodemon server/index.js & webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seedDB_1": "node testProjects.js"
   },
   "repository": {
     "type": "git",

@@ -27,7 +27,7 @@
     - [X] Model methods
       - [X] GET project
       - [X] PUT project (JUST AN OUTLINE!)
-      - [X] PUT item (JUST AN OUTLINE!)
+      - [X] PUT ticket (JUST AN OUTLINE!)
     - [ ] insert a couple records to MongoDB directly through the mongo shell
       - [ ] Create a js file that will hold a couple db.insertOne invokations with sample objects
       - [ ] Fill out that json file.
@@ -35,13 +35,13 @@
     - [X] Create the following routes:
       - [X] GET project
       - [X] PUT project (JUST AN OUTLINE!)
-      - [X] PUT item (JUST AN OUTLINE!)
+      - [X] PUT ticket (JUST AN OUTLINE!)
   - [ ] Client/src/components
-    - [ ] Create a file for all the components you need
+    - [ ] Create a file for all the components you'll need
     - [ ] Complete a rough version the components needed to get a project by ID
       - [ ] App.jsx
       - [ ] Projects_List.jsx
-      - [ ]
+      - [ ] Projects_List_ticket.jsx
   -[ ] Test your GET USER
     - [ ] Generate 100 primary records
     - [ ] Seed MongoDB
@@ -52,10 +52,10 @@
     - [ ] Models:
       - [X] Users (CREATE THE WHOLE SCHEMA)
     - [X] Model methods
-      - [X] Finish PUT user (JUST AN OUTLINE!)
+      - [ ] Finish GET project
       - [X] Finish PUT project (JUST AN OUTLINE!)
-      - [X] Finish PUT item (JUST AN OUTLINE!)
-    - [ ] insert a couple records to MongoDB directly through the mongo shell
+      - [X] Finish PUT ticket (JUST AN OUTLINE!)
+      - [ ] insert a couple records to MongoDB directly through the mongo shell
       - [ ] Create a js file that will hold a couple db.insertOne invokations with sample objects
       - [ ] Fill out that json file.
   - [X] Server
@@ -63,11 +63,11 @@
       - [X] GET user
       - [X] Finish PUT user (JUST AN OUTLINE!)
       - [X] Finish PUT project (JUST AN OUTLINE!)
-      - [X] Finish PUT item (JUST AN OUTLINE!)
+      - [X] Finish PUT ticket (JUST AN OUTLINE!)
   - [ ] Client/src/components
     - [ ] Create a file for all the components you need
     - [ ] Generate 100 primary records
     - [ ] Seed MongoDB
-    - [ ] test PUT user
-    - [ ] test PUT user
-    - [ ] test PUT user
+    - [ ] test GET project
+    - [ ] test PUT project
+    - [ ] test GET ticket
