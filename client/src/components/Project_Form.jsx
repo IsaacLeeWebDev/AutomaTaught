@@ -9,15 +9,25 @@ class Project_Form extends React.Component {
     super(props);
     this.state = {
     "_id": props.projects.length,
-    "title": '',
-    "description": '',
     "createdAt": '',
     "deadline": '',
-    "techChoices": {
-      "database": '',
-      "frontendFramework": '',
+    "database": '',
+    "pressReleaseDetails": {
+      "title": '',
+      "subtitle": '',
+      "appDescriptionParagraph": '',
+      "hypotheticalComplaints1": '',
+      "hypotheticalComplaints2": '',
+      "hypotheticalComplaints3": '',
+      "appSolutionPitch": '',
+      "quoteFromCreator": '',
+      "howToGetSteps": [],
+      "whatPeopleAreSaying": '',
+      "callToAction": '',
     },
     "tickets": [],
+    "primaryRecordExample" : {},
+    "viewsRequired": [],
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
