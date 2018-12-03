@@ -77,9 +77,12 @@ class App extends React.Component {
 
 export default App;
 
-// stretch goals:
-// Timers on everything.
-// Start working button
-  // Break reminders
-  // Commit reminders
-// animations from All projects to project dashboard
+/*
+Stretch Goals: -------------------------------------
+
+  > Start work session button.
+  > Commit reminders
+  > Break reminders
+  > animations from All projects to project dashboard
+
+*/

@@ -29,8 +29,10 @@ export default Project_Dashboard;
 /*
 Stretch Goals: ----------------------------------------
 
+
 > State: % Project Completion
   - T-shirt-size-points completed divided by T-shirt-size-points
+  - Punctuality State: Good (5% or more ahead) , Keeping Up (5% to -0.5% ahead), Behind (less than -0.5% ahead)
 
 > Break tickets into Blocked, Backlog, In Progress, Committed
   - This means you'll have four ticket lists where you have one.

@@ -45,18 +45,28 @@
       - [X] Projects_List.jsx
       - [X] Projects_List_Item.jsx
 
-- [ ] ITERATION 3: MVProjects Dashboard ------------------------------
+- [X] ITERATION 2: MVProjects Dashboard ------------------------------
   - [X] client/src/components
     - [X] New File Projects_Dashboard.jsx
       - [X] Create a hello-world div for this file
       - [X] Display all project details
-      - [X] New File: Ticket.jsx
-          - [X] Should display all information besides ticket id
-          - [X] Should have Complete Ticket button
-          - [X] Should have Edit Ticket Button
-          - [X] Should have Delete Ticket Button
+      - [X] New File: client/src/components/Tickets_List.jsx
+        - [X] Should display how many tickets remain
+        - [ ] Should create several Ticket components.
+          - [X] New File: client/src/Tickets_List.jsx
+              - [X] Should display all information besides ticket id
+              - [X] Should have Complete Ticket button
+              - [X] Should have Edit Ticket Button
+              - [X] Should have Delete Ticket Button
     - [X] App.jsx
       - [X] Bulid View Changer method (app has mulitple pages)
+        - [ ] Should be passed to the following components:
+          - [ ] Projects_List_Item components
+          - [ ] Create New Project button
+          - [ ] Create New Ticket buttons
+          - [ ] Edit Ticket buttons
+          - [ ] "Your Projects" in the Nav bar
+          - [ ]
       - [X] Build a render view method (app has mulitple pages)
     - [X] Test if renderView works
 

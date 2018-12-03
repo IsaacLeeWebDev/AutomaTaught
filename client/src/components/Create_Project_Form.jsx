@@ -34,5 +34,11 @@ class Create_Project_Form extends React.Component {
 
 export default Create_Project_Form;
 
-// stretch goal: Form validation
-// stretch goal: Personalized look
+/*
+Stretch Goals: -------------------------
+
+  > Form validation
+  > Personalized look
+    - Just the View content. #101 is bae
+    - Ticket color based on Completion State, Ticket Size, Time remaining
+*/

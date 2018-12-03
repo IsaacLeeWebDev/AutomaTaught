@@ -56,6 +56,8 @@ Stretch Gaols: -------------------------
   - xl: complete a feature/component that's familiar to you ~3hrs
   - 2xl: complete a whole service: 1 day
 
+> Display what directory (or directories) and file(s) must be created/edited in order to complete a given ticket
+
 > Mark tickets as "Stretch Goals"
 > Blocked Tickets should have "How to Unblock" instructions
 > Timers on Tickets
@@ -63,4 +65,8 @@ Stretch Gaols: -------------------------
   - In-progress for ___hours ___minutes ___seconds
   - committed-by timers
 
+> Punctuality State
+  - Committed Early
+  - Committed On-Time
+  - Committed Late
 */

@@ -39,4 +39,8 @@ const Projects_List_Item = (props) => {
 }
 export default Projects_List_Item;
 
-// stretch goal: progress bar
+/*
+stretch goal:
+  > progress bar, % Complete, Time remaining,
+
+*/
