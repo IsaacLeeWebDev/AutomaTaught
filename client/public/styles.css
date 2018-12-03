@@ -1,5 +1,6 @@
 body {
   background-color: #100;
+  color: #fff;
 }
 
 h1 {
@@ -45,11 +46,27 @@ h1 {
 }
 
 .btn {
+  color: #fff;
   background-color: #100;
   border-color: #baefff;
 }
 
 .btn:hover {
+  color: #fff;
   background-color: #100;
   border-color: #aaffaa;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: #aaffaa;
+  border-color: #aaffaa;
+}
+
+.btn-delete:hover {
+  border-color: #ffbaba;
+}
+
+.btn-delete:active {
+  background-color: #ffbaba;
 }

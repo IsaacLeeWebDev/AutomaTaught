@@ -11,8 +11,10 @@ const Tickets_List = (props) => {
   }
   return (
     <Row>
-      <h3> Tickets to complete: </h3>
-      {ticketsJSX}
+      <Col smOffset={2}>
+        <h3> Tickets to complete: </h3>
+        {ticketsJSX}
+      </Col>
     </Row>
     );
 }

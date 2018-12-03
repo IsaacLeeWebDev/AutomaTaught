@@ -7,12 +7,20 @@ import {
 
 const Ticket = (props) => (
   <Row>
-    <h4>{props.ticket.title}</h4>
-    <Row>
-      <p>Started: {String(props.ticket.createdAt)} </p>
-      <p>Started: {String(props.ticket.createdAt)} </p>
-      <p>Started: {String(props.ticket.createdAt)} </p>
-    </Row>
+    <Col>
+      <Well>
+        <h4>{props.ticket.title}</h4>
+        <Row>
+          <p>Started: {String(props.ticket.createdAt)} </p>
+          <p>Deadline: {String(props.ticket.deadline)}</p>
+          <p>Task: {String(props.ticket.body)} </p>
+          <p>Started: {String(props.ticket.createdAt)} </p>
+          <a className="btn"> Complete </a>
+          <a className="btn"> Edit </a>
+          <a className="btn btn-delete"> Delete </a>
+        </Row>
+      </Well>
+    </Col>
   </Row>
 );
 
