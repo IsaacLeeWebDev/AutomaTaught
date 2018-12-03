@@ -15,19 +15,20 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: '/projects',
-  //     success: (data) => {
-  //       this.setState({
-  //         items: data
-  //       })
-  //     },
-  //     error: (err) => {
-  //       console.log('err', err);
-  //     }
-  //   });
-  // }
+  componentDidMount() {
+    $.ajax({
+      url: '/projects',
+      success: (data) => {
+        this.setState({
+          items: data
+        })
+        console.log(data);
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
+  }
 
   render () {
     return (

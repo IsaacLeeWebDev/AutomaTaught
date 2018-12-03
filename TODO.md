@@ -14,7 +14,7 @@
 
 ## FEATURES
 
-- [ ] SETUP: --------------------------------------
+- [X] SETUP: --------------------------------------
   - [X] Fill out starter repo
     - [X] configure db
       - [X] Use MongoDB Promises
@@ -22,10 +22,10 @@
     - [X] rename the default components.
     - [X] configure webpack
     - [X] run build and start
-  - [ ] get Postman
+  - [X] get Postman
 
 - [ ] ITERATION 1: MVPrimary GET --------------------------------------
-  - [ ] database/
+  - [X] database/
     - [X] index.js/
       - [X] Define all necessary models:
         - [X] Projects (rewrite the starter schema)
@@ -33,11 +33,9 @@
       - [X] GET project
       - [X] PUT project (JUST AN OUTLINE!)
       - [X] PUT ticket (JUST AN OUTLINE!)
-    - [ ] insert a couple records to MongoDB directly through the mongo shell
-        - [X] Create insertMany script
-        - [X] Create a js file that exports a couple db.insertOne invokations with sample objects
-        - [ ] Insert the primary records.
-  - [X] Server
+      - [X] Create a js file that insertMany()'s an array with a couple primary rows.
+      - [X] Insert the primary records.
+  - [X] server/server.js
     - [X] Finish GET project
     - [X] Outline PUT project
     - [X] Outline PUT ticket
@@ -46,7 +44,6 @@
       - [X] App.jsx
       - [X] Projects_List.jsx
       - [X] Projects_List_Item.jsx
-
 
 - [ ] ITERATION 2: MVPut --------------------------------------
   - [ ] Seed script

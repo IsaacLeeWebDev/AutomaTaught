@@ -1,9 +1,14 @@
-const testProjects = [{
+const testProjects = [
+  {
     "_id": 0,
-    "title": 'Test Project',
+    "title": 'DB Project',
     "description": 'A test MVP project for my MVP project',
     "createdAt": new Date(),
     "deadline": new Date(),
+    "techChoices": {
+      "database": 'MongoDB',
+      "frontendFramework": 'React',
+    },
     "tickets": [
       {
         "id": 0,
@@ -24,11 +29,15 @@ const testProjects = [{
     ],
   },
   {
-    "_id": 0,
-    "title": 'Test Project 2!!!!!',
+    "_id": 1,
+    "title": 'DB Project 2!!!!!',
     "description": 'Another test MVP project for my MVP project',
     "createdAt": new Date(),
     "deadline": new Date(),
+    "techChoices": {
+      "database": 'MongoDB',
+      "frontendFramework": 'React',
+    },
     "tickets": [
       {
         "id": 0,
@@ -48,7 +57,6 @@ const testProjects = [{
       },
     ],
   },
-
 ];
 
-export default testProjects;
+module.exports = testProjects;

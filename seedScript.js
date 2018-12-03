@@ -3,7 +3,7 @@
 const testProjects = require('testProjects.js');
 const Models = require('./database/index.js');
 
-Modles.seedProjects(testProjects)
+Models.seedProjects(testProjects)
 .then()
 .catch()
 // then log something
