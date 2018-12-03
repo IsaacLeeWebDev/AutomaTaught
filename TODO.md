@@ -103,6 +103,9 @@
             - [ ] views.push(list_item_name)
           - [ ] list & view but not homepage
             - [ ] views.push(list_name, list_item_name)
+          - [ ] in a wizard
+            - [ ] How many views/pages in the wizard?
+            - [ ] veiws.concat([...wizard-pages/veiws])
 
     - [ ] New file: Create_Projects_Form
       - [ ] test PUT project from the front end
