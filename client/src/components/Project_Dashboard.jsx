@@ -26,3 +26,30 @@ const Project_Dashboard = (props) => (
 
 export default Project_Dashboard;
 
+/*
+Stretch Goals: ----------------------------------------
+
+> State: % Project Completion
+  - T-shirt-size-points completed divided by T-shirt-size-points
+
+> Break tickets into Blocked, Backlog, In Progress, Committed
+  - This means you'll have four ticket lists where you have one.
+  - This means Tickets_List needs a prop that contains which list it is.
+
+> Display a "Current Ticket" which represents the In-Progress item with the
+ soonest due date, or if none exists, the first In-Progress item with the
+first
+
+> New Ticket List: Stretch Goals.
+
+> New component: Filter bar
+  - Filter tickets on keypress
+
+> Hotkeys:
+  - Commit current ticket (shift + c + t)
+  - Edit current ticket (shift + e + t)
+  - Abandon current ticket (shift + a + t)
+  - Backlog current ticket (shift + b + t)
+  - Create new ticket (shift + c + t)
+  - Create new stretch-goal ticket (shift + c + t)
+*/

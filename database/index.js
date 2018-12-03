@@ -77,3 +77,12 @@ const methods = {
 }
 
 module.exports = methods;
+
+/*
+
+Stretch Goals:
+
+> New Ticket field: Iteration number - int
+> New Ticket field: Stretch Goal - boolean
+
+*/

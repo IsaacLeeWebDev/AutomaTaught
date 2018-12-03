@@ -24,7 +24,9 @@ class App extends React.Component {
     };
     this.changeView = this.changeView.bind(this);
   }
+  // Component methods -----------------------------
 
+  // Managing Views ---------------------------------
   componentDidMount() {
     $.ajax({
       url: '/projects',
