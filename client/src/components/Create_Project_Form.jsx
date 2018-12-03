@@ -4,22 +4,30 @@ import {
   Grid, Row, Col, PageHeader
 } from 'react-bootstrap';
 
-import CP_Form_1 from './CP_Form_1.jsx';
-import CP_Form_2 from './CP_Form_1.jsx';
-import CP_Form_3 from './CP_Form_1.jsx';
-
 class Create_Project_Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: 0,
-    }
+    "_id": props.projects.tickets.length,
+    "title": '',
+    "description": '',
+    "createdAt": '',
+    "deadline": '',
+    "techChoices": {
+      "database": '',
+      "frontendFramework": '',
+    },
+    "tickets": [],
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  changeView() {
-    if (view === 0) {
+  handleInputChange() {
 
-    }
+  }
+
+  render() {
+    <div>Hello World!</div>
   }
 
 };

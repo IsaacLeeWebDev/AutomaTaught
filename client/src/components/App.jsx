@@ -1,19 +1,27 @@
+// Packages
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import Projects_List from './Projects_List.jsx';
 import {
   Grid, Row, Col, PageHeader
 } from 'react-bootstrap';
+import Nav from './Nav.jsx'
+
+// Components
+import Projects_List from './Projects_List.jsx';
+import Create_Project_Form from './Create_Project_Form';
+import Project_Dashboard from './Project_Dashboard';
+
+// Fake Data
 import projects from '../../../testProjects.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: projects,
-      view: 'Projects_List'
-    }
+      projects: projects,
+      view: 'Projects_List',
+      currentProject: null,
+    };
     this.changeView = this.changeView.bind(this);
   }
 
@@ -33,24 +41,32 @@ class App extends React.Component {
   }
 
   changeView(viewNameString) {
-    if(viewNameString === 'Projects_List') {
-      this.setState('Projects_List');
+    if (viewNameString === 'Projects_List') {
+      this.setState({view:'Projects_List'});
     } else if (viewNameString === 'Project_Dashboard') {
-      this.setState('Project_Dashboard');
+      this.setState({view:'Project_Dashboard'});
     } else if (viewNameString === 'Create_Project_Form') {
-      this.setState('Create_Project_Form');
+      this.setState({view:'Create_Project_Form'});
     }
   }
 
   renderView() {
-
+    const projects = this.state.projects
+    if (this.state.view === 'Projects_List') {
+      return (<Projects_List projects={projects} changeView={this.changeView} />);
+    } else if (this.state.view  === 'Project_Dashboard') {
+      return (<Project_Dashboard currentProject={this.state.currentProject} changeView={this.changeView} />);
+    } else if (this.state.view === 'Create_Project_Form') {
+      return (<Create_Project_Form changeView={this.changeView} />);
+    }
   }
 
   render () {
     return (
       <Grid>
         <PageHeader>Welcome to MVPro!</PageHeader>
-        <Projects_List items={this.state.items}/>
+        <Nav projects={this.state.projects} changeView={this.changeView} />
+        {this.renderView()}
       </Grid>
     )
   }

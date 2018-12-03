@@ -24,7 +24,7 @@
     - [X] run build and start
   - [X] get Postman
 
-- [ ] ITERATION 1: MVPrimary GET --------------------------------------
+- [X] ITERATION 1: MVPrimary GET --------------------------------------
   - [X] database/
     - [X] index.js/
       - [X] Define all necessary models:
@@ -47,10 +47,17 @@
 
 - [ ] ITERATION 3: MVProjects Dashboard ------------------------------
   - [ ] client/src/components
+    - [X] New File Projects_Dashboard.jsx
+      - [X] Create a hello-world div for this file
+      - [ ] Display all project details
+      - [ ] Tickets
+          - [ ] Create Ticket button
+          - [ ] Edit Ticket Button
+          - [ ] Delete Ticket Button
     - [ ] App.jsx
       - [ ] Bulid View Changer method (app has mulitple pages)
-    - [ ] Create a new file to view a project
-    - [ ]
+      - [ ] Build a render view method (app has mulitple pages)
+    - [ ] Test if renderView works
 
 - [ ] ITERATION 3: MVPrimary GET One ------------------------------
   - [ ] database/
@@ -63,9 +70,9 @@
       - [ ] Finish PUT project
       - [ ] Outline PUT ticket
   - [ ] client/src/components
-    - [ ] create a new file to view a project
-    - [ ] test PUT project from the front end
-    - [ ] test PUT ticket from the front end
+    - [ ] New file: Create_Projects_Form
+      - [ ] test PUT project from the front end
+      - [ ] test PUT ticket from the front end
 
 - [ ] ITERATION 3: MVPut --------------------------------------
   - [ ] database/
