@@ -30,26 +30,44 @@
       - [X] Define all necessary models:
         - [X] Projects (rewrite the starter schema)
     - [X] Model methods
-      - [X] GET project
-      - [X] PUT project (JUST AN OUTLINE!)
-      - [X] PUT ticket (JUST AN OUTLINE!)
+      - [X] GET projects
+      - [X] Outline PUT project
+      - [X] Outline PUT ticket
       - [X] Create a js file that insertMany()'s an array with a couple primary rows.
       - [X] Insert the primary records.
   - [X] server/server.js
-    - [X] Finish GET project
+    - [X] Finish GET projects
     - [X] Outline PUT project
     - [X] Outline PUT ticket
   - [X] Client/src/components
-    - [X] Complete a rough version the components needed to get a project by ID
+    - [X] Complete a rough version the components needed to get all projects by ID
       - [X] App.jsx
       - [X] Projects_List.jsx
       - [X] Projects_List_Item.jsx
 
-- [ ] ITERATION 2: MVPut --------------------------------------
-  - [ ] Seed script
-    - [ ] Generate 100 primary records with faker
-    - [ ] Seed MongoDB with your seed script
-    - [ ] test GET projects to make sure it still works
+- [ ] ITERATION 3: MVProjects Dashboard ------------------------------
+  - [ ] client/src/components
+    - [ ] App.jsx
+      - [ ] Bulid View Changer method (app has mulitple pages)
+    - [ ] Create a new file to view a project
+    - [ ]
+
+- [ ] ITERATION 3: MVPrimary GET One ------------------------------
+  - [ ] database/
+    - [ ] index.js
+      - [ ] Finish PUT project
+      - [ ] Outline PUT ticket
+      - [ ] test PUT project through Postman
+  - [ ] server/
+    - [ ] Create the following routes:
+      - [ ] Finish PUT project
+      - [ ] Outline PUT ticket
+  - [ ] client/src/components
+    - [ ] create a new file to view a project
+    - [ ] test PUT project from the front end
+    - [ ] test PUT ticket from the front end
+
+- [ ] ITERATION 3: MVPut --------------------------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT project
@@ -98,7 +116,8 @@
       - [ ] Add a delete button to tickets
       - [ ] test delete projects from the front end
 
-- [ ] ITERATION 5: MVPollishing
+- [ ] ITERATION 5: MVPollishing --------------------------------------
+  - [ ] Add justification to all your tickets
   - [ ] Give everything a solid refactor.
     - [ ] client/
     - [ ] server/
@@ -111,3 +130,7 @@
       - [ ]
     - [ ] Add PERSONALIZED LOOKS to PROJECTS!
       - [ ]
+    - [ ] Seed script
+      - [ ] Generate 100 primary records with faker
+      - [ ] Seed MongoDB with your seed script
+      - [ ] test GET projects to make sure it still works

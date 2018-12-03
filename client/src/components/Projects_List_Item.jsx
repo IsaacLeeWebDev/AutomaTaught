@@ -5,13 +5,31 @@ import {
 
 const Projects_List_Item = (props) => (
   <Row>
-    <Well bsSize="large" className="project_li">
+    <Well bsSize="large" className="project_li" onClick={() => }>
       <Row>
-        <h4>{ props.item.title }</h4>
+        <Col mdOffset={1}>
+          <h3>{ props.item.title }</h3>
+        </Col>
       </Row>
-      <Row sm={4}>
+      <Row>
         <Well className="project_li_details">
-          Hi there!
+          <Row>
+          <Col sm={4}>
+            <Well bsSize="large" className="project_li_details_well">
+              Total Tickets
+            </Well>
+          </Col>
+          <Col sm={4}>
+            <Well bsSize="large" className="project_li_details_well">
+              Current Tickets:
+            </Well>
+          </Col>
+          <Col sm={4}>
+            <Well bsSize="large" className="project_li_details_well">
+              Time Remaining:
+            </Well>
+          </Col>
+          </Row>
         </Well>
       </Row>
     </Well>

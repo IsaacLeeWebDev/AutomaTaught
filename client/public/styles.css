@@ -11,16 +11,21 @@ h1 {
 
 .well {
   border-radius: 0;
-  border-color: black;
-  background-color: black
+  border-color: #222;
+  background-color: #222;
 }
 
 .project_li {
   color: white;
   background-color: black;
-  border-color: #222;
+  border-color: black;
 }
 
 .project_li_details {
-  background-color: #ffffff;
+  background-color: black;
+  border-color: black;
+}
+
+.project_li_details_well {
+  background-color: #444;
 }

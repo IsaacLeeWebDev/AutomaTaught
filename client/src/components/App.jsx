@@ -11,8 +11,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: projects
+      items: projects,
+      view: 'Projects_List'
     }
+    this.changeView = this.changeView.bind(this);
   }
 
   componentDidMount() {
@@ -30,15 +32,35 @@ class App extends React.Component {
     });
   }
 
+  changeView(viewNameString) {
+    if(viewNameString === 'Projects_List') {
+      this.setState('Projects_List');
+    } else if (viewNameString === 'Project_Dashboard') {
+      this.setState('Project_Dashboard');
+    } else if (viewNameString === 'Create_Project_Form') {
+      this.setState('Create_Project_Form');
+    }
+  }
+
+  renderView() {
+
+  }
+
   render () {
     return (
-    <Grid>
-      <PageHeader>Welcome to MVPro!</PageHeader>
-      <Projects_List items={this.state.items}/>
-    </Grid>)
+      <Grid>
+        <PageHeader>Welcome to MVPro!</PageHeader>
+        <Projects_List items={this.state.items}/>
+      </Grid>
+    )
   }
 }
 
-export default App
+export default App;
 
-// stretch goal: Timers on everything.
+// stretch goals:
+// Timers on everything.
+// Start working button
+  // Break reminders
+  // Commit reminders
+// animations from All projects to project dashboard
