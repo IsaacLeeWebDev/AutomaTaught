@@ -1,39 +1,69 @@
+// Packages
 import React from 'react';
 import $ from 'jquery';
 import {
-  Row, Col, Form, FormGroup, FormControl, ControlLabel, Well
+  Row, Col, Form, FormGroup, FormControl, ControlLabel, Well, Pager
 } from 'react-bootstrap';
+// Components
+import Project_Form_Step_1 from './Project_Form_Step_1.jsx';
+import Project_Form_Step_2 from './Project_Form_Step_2.jsx';
+import Project_Form_Step_3 from './Project_Form_Step_3.jsx';
 
 class Project_Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    "_id": props.projects.length,
-    "createdAt": '',
-    "deadline": '',
-    "database": '',
-    "pressReleaseDetails": {
-      "title": '',
-      "subtitle": '',
-      "appDescriptionParagraph": '',
-      "hypotheticalComplaints1": '',
-      "hypotheticalComplaints2": '',
-      "hypotheticalComplaints3": '',
-      "appSolutionPitch": '',
-      "quoteFromCreator": '',
-      "howToGetSteps": [],
-      "whatPeopleAreSaying": '',
-      "callToAction": '',
-    },
-    "tickets": [],
-    "primaryRecordExample" : {},
-    "viewsRequired": [],
+      newProject: {
+        "_id": props.projects.length,
+        "createdAt": '',
+        "deadline": '',
+        "pressReleaseDetails": {
+          "title": '',
+          "subtitle": '',
+          "appDescriptionParagraph": '',
+          "hypotheticalComplaints1": '',
+          "hypotheticalComplaints2": '',
+          "hypotheticalComplaints3": '',
+          "appSolutionPitch": '',
+          "quoteFromCreator": '',
+          "howToGetSteps": [],
+          "whatPeopleAreSaying": '',
+          "callToAction": '',
+        },
+        "database": '',
+        "tickets": [],
+        "primaryRecordExample" : {},
+        "viewsRequired": [],
+      },
+      step: 1,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.renderProjectFormStep = this.renderProjectFormStep.bind(this);
+    this.progressFormStep = this.progressFormStep.bind(this);
+    this.regressFormStep = this.regressFormStep.bind(this);
   }
 
-  handleInputChange() {
+  handleInputChange(event) {
+    // event.target.id is the name of the state
+    // event.target.value is the value to set it to
+  }
 
+  progressFormStep() {
+    this.setState({step: this.state.step + 1})
+  }
+
+  regressFormStep() {
+    this.setState({step: this.state.step - 1})
+  }
+
+  renderProjectFormStep() {
+    if (this.state.step === 1) {
+      return (<Project_Form_Step_1 />)
+    } else if (this.state.step === 2) {
+      return (<Project_Form_Step_2 />)
+    } else if (this.state.step === 3) {
+      return (<Project_Form_Step_3 />)
+    }
   }
 
   render() {
@@ -41,30 +71,18 @@ class Project_Form extends React.Component {
       <Well>
         <Row>
           <Well>
-            <Form horizontal>
-              <FormGroup controlId="formHorizontalDeadline">
-                <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
-                <Col sm={8}>
-                  <FormControl id="deadline" className="form_field" type="datetime-local" />
-                </Col>
-              </FormGroup>
-              <FormGroup controlId="formHorizontalTitle">
-                <Col componentClass={ControlLabel} sm={4}>What is this project called?</Col>
-                <Col sm={8}>
-                  <FormControl id="title" className="form_field" />
-                </Col>
-              </FormGroup>
-              <FormGroup controlId="formHorizontalDescription">
-                <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
-                <Col sm={8}>
-                  <FormControl id="deadline" className="form_field" type="text-area" />
-                </Col>
-              </FormGroup>
-              <FormControl id="database" className="form_field" type="datetime-local" />
-              <FormControl id="frontendFramework" className="form_field" type="datetime-local" />
-              <a id="submit_project" className="btn btn-success"> Create Project! </a>
-            </Form>
+            {this.renderProjectFormStep()}
           </Well>
+        </Row>
+        <Row>
+          <Pager>
+            <Pager.Item previous href="#" onClick={this.regressFormStep}>
+              &larr; Previous Page
+            </Pager.Item>
+            <Pager.Item next href="#" onClick={this.progressFormStep}>
+              Next Page &rarr;
+            </Pager.Item>
+          </Pager>
         </Row>
       </Well>
     );
