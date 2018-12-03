@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import Ticket from './Ticket.jsx';
 
-const Tickets_List = (props) => {
+const Tickets_List = props => {
   const ticketsJSX = [];
   for (let i = 0; i < props.tickets.length; i++) {
     ticketsJSX.push((<Ticket ticket={props.tickets[i]} />));
