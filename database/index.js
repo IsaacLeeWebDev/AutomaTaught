@@ -16,16 +16,16 @@ const projectSchema = mongoose.Schema({
   _id: Number,
   title: String,
   description: String,
-  createdAt: Date,
-  deadline: Date,
+  createdAt: String,
+  deadline: String,
   tickets: [
     {
       id: Number,
       title: String,
       body: String,
       createdAt: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: String(new Date()),
       },
       completionState: Boolean,
       ticketType: {
