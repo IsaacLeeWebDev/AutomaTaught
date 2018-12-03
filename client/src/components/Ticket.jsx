@@ -10,8 +10,21 @@ class Ticket extends React.Component {
     super(props);
   }
 
-  completeTicket() {
+  updateTicketProgress(progressLevel) {
+    // backlogged?
+      // set as backlogged
 
+    // inProgress?
+      // set as inProgress
+
+    // blocked?
+      // set as blocked
+      // * ask for "How to unblock" and add T-shirt size
+
+    // abandoned?
+      // splice it from the tickets array for this project
+
+    // send a put request to /api/:projectId/:ticketId for whatever update happened
   }
 
   render() {
@@ -28,10 +41,10 @@ class Ticket extends React.Component {
               <a className="btn"> Edit </a>
             </Row>
             <Row>
-              <a className="btn">Set as Backlogged </a>
-              <a className="btn">Set as In-Progress </a>
-              <a className="btn" onClick={() => {}}>Set as Committed </a>
-              <a className="btn btn-delete"> Abandon this ticket</a>
+              <a id="backlogged" className="btn">Set as Backlogged </a>
+              <a id="inProgress" className="btn">Set as In-Progress </a>
+              <a id="committed" className="btn" onClick={() => {}}>Set as Committed </a>
+              <a id="abandoned" className="btn btn-delete"> Abandon this ticket</a>
             </Row>
           </Well>
         </Col>
