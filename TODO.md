@@ -52,7 +52,7 @@
       - [X] Display all project details
       - [X] New File: client/src/components/Tickets_List.jsx
         - [X] Should display how many tickets remain
-        - [ ] Should create several Ticket components.
+        - [X] Should create several Ticket components.
           - [X] New File: client/src/Tickets_List.jsx
               - [X] Should display all information besides ticket id
               - [X] Should have Complete Ticket button
