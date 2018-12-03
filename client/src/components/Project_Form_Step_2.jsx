@@ -6,8 +6,8 @@ import {
 
 const Project_Form_Step_2 = props => (
   <Form>
+    <h2>Your App's Press Release </h2>
     <FormGroup controlId="formHorizontalDeadline">
-      <h2>Your App's Press Release </h2>
       <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
       <Col sm={8}>
         <FormControl id="deadline" className="form_field" type="datetime-local" />

@@ -8,6 +8,9 @@ import {
 class Ticket extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      completionState: props.ticket.completionState,
+    };
   }
 
   updateTicketProgress(progressLevel) {
@@ -38,13 +41,13 @@ class Ticket extends React.Component {
               <p>Deadline: {String(props.ticket.deadline)}</p>
               <p>Task: {props.ticket.body} </p>
               <p>Completion State: {} </p>
-              <a className="btn"> Edit </a>
+              <a className="btn" onClick={() => changeView('Ticket_Form')}> Edit </a>
+              <a id="abandoned" className="btn btn-delete"> Abandon ticket</a>
             </Row>
             <Row>
               <a id="backlogged" className="btn">Set as Backlogged </a>
               <a id="inProgress" className="btn">Set as In-Progress </a>
-              <a id="committed" className="btn" onClick={() => {}}>Set as Committed </a>
-              <a id="abandoned" className="btn btn-delete"> Abandon this ticket</a>
+              <a id="committed" className="btn" >Set as Committed </a>
             </Row>
           </Well>
         </Col>

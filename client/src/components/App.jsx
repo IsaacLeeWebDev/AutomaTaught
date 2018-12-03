@@ -54,7 +54,6 @@ class App extends React.Component {
   }
 
   renderView() {
-    // const projects = this.state.projects
     if (this.state.view === 'Projects_List') {
       return (<Projects_List projects={this.state.projects} changeView={this.changeView} />);
     } else if (this.state.view  === 'Project_Dashboard') {

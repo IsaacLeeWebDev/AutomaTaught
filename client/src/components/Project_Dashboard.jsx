@@ -20,7 +20,8 @@ const Project_Dashboard = (props) => (
     <Row>
       <p>{props.currentProject.description}</p>
     </Row>
-    <Tickets_List tickets={props.currentProject.tickets} />
+    <Tickets_List tickets={props.currentProject.tickets} changeView={props.changeView} />
+    <a className="btn btn-success" onClick={() => props.changeView('Ticket_Form')} >Create New Ticket</a>
   </Well>
 );
 

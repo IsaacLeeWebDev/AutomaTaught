@@ -63,17 +63,16 @@
         - [ ] Should be passed to the following components:
           - [X] Projects_List_Item components
           - [X] Create New Project button
-          - [ ] Create New Ticket buttons
-          - [ ] Edit Ticket buttons
-          - [ ] "Your Projects" in the Nav bar
-          - [ ]
+          - [X] Create New Ticket buttons
+          - [X] Edit Ticket buttons
+          - [X] "Your Projects" in the Nav bar
       - [X] Build a render view method (app has mulitple pages)
     - [X] Test if renderView works
 
 - [ ] ITERATION 3: MVPut NEW PROJECT ------------------------------
   - [ ] client/src/components
     - [ ] implement a form that builds a new project, which includes:
-      - [ ] a deadline
+      - [X] a deadline
       - [ ] a press release
       - [ ] What tech choices the user makes
         - [ ] Database Selection
