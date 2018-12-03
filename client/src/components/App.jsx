@@ -40,11 +40,12 @@ class App extends React.Component {
     });
   }
 
-  changeView(viewNameString) {
+  changeView(viewNameString, projectId) {
     if (viewNameString === 'Projects_List') {
       this.setState({view:'Projects_List'});
     } else if (viewNameString === 'Project_Dashboard') {
-      this.setState({view:'Project_Dashboard'});
+      console.log('Current Project', projects[projectId]);
+      this.setState({view:'Project_Dashboard', currentProject: projects[projectId]});
     } else if (viewNameString === 'Create_Project_Form') {
       this.setState({view:'Create_Project_Form'});
     }

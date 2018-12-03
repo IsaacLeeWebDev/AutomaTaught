@@ -6,7 +6,7 @@ import {
 const Projects_List_Item = (props) => {
     return (
       <Row>
-        <Well bsSize="large" className="project_li" onClick={() => props.changeView('Project_Dashboard')}>
+        <Well bsSize="large" className="project_li" onClick={() => props.changeView('Project_Dashboard', props.project._id)}>
           <Row>
             <Col smOffset={1}>
               <h3>{ props.project.title }</h3>

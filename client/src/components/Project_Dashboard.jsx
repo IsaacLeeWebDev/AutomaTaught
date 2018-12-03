@@ -5,12 +5,22 @@ import {
   Row, Col, Well, Button,
 } from 'react-bootstrap';
 // Components
-import Ticket from './Ticket.jsx';
+import Tickets_List from './Tickets_List.jsx';
 
 
 const Project_Dashboard = (props) => (
   <Well className="project_dashboard">
     Hello From Project Dashboard!
+    <Row>
+      <Well>
+        <h3>{props.currentProject.title}</h3>
+        <h4> ( Due at: {String(props.currentProject.deadline)} )</h4>
+      </Well>
+    </Row>
+    <Row>
+      <p>{props.currentProject.description}</p>
+    </Row>
+    <Tickets_List tickets={props.currentProject.tickets} />
   </Well>
 );
 
