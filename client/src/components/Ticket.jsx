@@ -30,7 +30,7 @@ class Ticket extends React.Component {
             <Row>
               <a className="btn">Set as Backlogged </a>
               <a className="btn">Set as In-Progress </a>
-              <a className="btn" onClick={() => }>Set as Committed </a>
+              <a className="btn" onClick={() => {}}>Set as Committed </a>
               <a className="btn btn-delete"> Abandon this ticket</a>
             </Row>
           </Well>
