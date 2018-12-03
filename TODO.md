@@ -14,7 +14,7 @@
 
 ## FEATURES
 
-- [X] SETUP: --------------------------------------
+- [X] SETUP: ---------------------------------------------------------
   - [X] Fill out starter repo
     - [X] configure db
       - [X] Use MongoDB Promises
@@ -70,9 +70,46 @@
       - [X] Build a render view method (app has mulitple pages)
     - [X] Test if renderView works
 
-- [ ] ITERATION 3: MVPrimary GET One ------------------------------
+- [ ] ITERATION 3: MVPut NEW PROJECT ------------------------------
+  - [ ] client/src/components
+    - [ ] implement a form that builds a new project, which includes:
+      - [ ] a deadline
+      - [ ] a press release
+      - [ ] What tech choices the user makes
+        - [ ] Database Selection
+          - [ ] Ask whether or not bad read/write consistency would result in imprisonment
+            - [ ] If so, ask whether or not they know Postgres
+              - [ ] If so, they get Postgres
+              - [ ] If not, they get MySQL
+            - [ ] If not, they get MongoDB
+      - [ ] Primary Record:
+        - [ ] Add columns
+          - [ ] Name:
+          - [ ] Datatype: (one of int, string, date, boolean, or secondary record)
+            - [ ] if secondary record
+              - [ ] Like a List of things, or Like an object with properties?
+              - [ ] recurse Add columns
+        - [ ] should create a json object representing a primary record.
+        - [ ] How is primary record created?
+          - [ ] Submiting a form which belongs to a unique view
+          - [ ] Triggering a non-form-related event
+        - [ ] Should app have a homepage? (+1 view)
+          - [ ] views.push('homepage_view)')
+        - [ ] Where is the primary record displayed?
+          - [ ] On the homepage
+          - [ ] in a list, like a feed or list of profiles
+            - [ ] views.push(list_name)
+          - [ ] in its own view, like a map search result
+            - [ ] views.push(list_item_name)
+          - [ ] list & view but not homepage
+            - [ ] views.push(list_name, list_item_name)
+
+    - [ ] New file: Create_Projects_Form
+      - [ ] test PUT project from the front end
+      - [ ] test PUT ticket from the front end
   - [ ] database/
     - [ ] index.js
+      - [ ] update schema to make sure that all fields are properly included:
       - [ ] Finish PUT project
       - [ ] Outline PUT ticket
       - [ ] test PUT project through Postman
@@ -81,11 +118,10 @@
       - [ ] Finish PUT project
       - [ ] Outline PUT ticket
   - [ ] client/src/components
-    - [ ] New file: Create_Projects_Form
-      - [ ] test PUT project from the front end
-      - [ ] test PUT ticket from the front end
+    - [ ] test PUT project from the front end
+    - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut --------------------------------------
+- [ ] ITERATION 3: MVPut update existing project -------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT project
@@ -100,7 +136,7 @@
     - [ ] test PUT project from the front end
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut Secondary_1 --------------------------------------
+- [ ] ITERATION 3: MVPut Secondary_1 ------------------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT ticket
