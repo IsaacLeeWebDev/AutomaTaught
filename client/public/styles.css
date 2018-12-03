@@ -70,3 +70,7 @@ h1 {
 .btn-delete:active {
   background-color: #ffbaba;
 }
+
+.form_field {
+  color: #000;
+}

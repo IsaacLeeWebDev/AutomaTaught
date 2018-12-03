@@ -8,7 +8,7 @@ import Nav from './Nav.jsx'
 
 // Components
 import Projects_List from './Projects_List.jsx';
-import Create_Project_Form from './Create_Project_Form';
+import Project_Form from './Project_Form';
 import Project_Dashboard from './Project_Dashboard';
 
 // Fake Data
@@ -48,19 +48,21 @@ class App extends React.Component {
     } else if (viewNameString === 'Project_Dashboard') {
       console.log('Current Project', projects[projectId]);
       this.setState({view:'Project_Dashboard', currentProject: projects[projectId]});
-    } else if (viewNameString === 'Create_Project_Form') {
-      this.setState({view:'Create_Project_Form'});
+    } else if (viewNameString === 'Project_Form') {
+      this.setState({view:'Project_Form'});
     }
   }
 
   renderView() {
-    const projects = this.state.projects
+    // const projects = this.state.projects
     if (this.state.view === 'Projects_List') {
-      return (<Projects_List projects={projects} changeView={this.changeView} />);
+      return (<Projects_List projects={this.state.projects} changeView={this.changeView} />);
     } else if (this.state.view  === 'Project_Dashboard') {
       return (<Project_Dashboard currentProject={this.state.currentProject} changeView={this.changeView} />);
-    } else if (this.state.view === 'Create_Project_Form') {
-      return (<Create_Project_Form changeView={this.changeView} />);
+    } else if (this.state.view === 'Project_Form') {
+      return (<Project_Form projects={this.state.projects} changeView={this.changeView} />);
+    } else if (this.state.view === 'Ticket_Form') {
+      return (<Ticket_Form project={this.state.currentProject} />)
     }
   }
 

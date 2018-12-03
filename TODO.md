@@ -61,8 +61,8 @@
     - [X] App.jsx
       - [X] Bulid View Changer method (app has mulitple pages)
         - [ ] Should be passed to the following components:
-          - [ ] Projects_List_Item components
-          - [ ] Create New Project button
+          - [X] Projects_List_Item components
+          - [X] Create New Project button
           - [ ] Create New Ticket buttons
           - [ ] Edit Ticket buttons
           - [ ] "Your Projects" in the Nav bar

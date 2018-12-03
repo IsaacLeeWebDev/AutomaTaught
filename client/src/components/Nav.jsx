@@ -11,7 +11,7 @@ const Nav = (props) => (
       <h4 className="your_projects" onClick={() => props.changeView('Projects_List')} >Your Projects ( {props.projects.length } projects open ) </h4>
     </Col>
     <Col sm={2} smOffset={3}>
-      <a className="btn btn-success">Create a new project</a>
+      <a className="btn btn-success" onClick={() => props.changeView('Project_Form')}>Create a new project</a>
     </Col>
   </Row>
 );
