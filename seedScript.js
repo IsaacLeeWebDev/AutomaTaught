@@ -8,7 +8,7 @@ Models.seedProjects(testProjects)
 .catch()
 // then log something
 
-// ITERATION 2 ----------------------
+// Stretch Goal: ----------------------
 
 // const faker = require('faker');
 
