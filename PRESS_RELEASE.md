@@ -1,8 +1,8 @@
 # MVPro
-## A workflow app for Full-Stack MVP apps
+## A workflow app for MVP apps
 
 ### What does MVPro do?
-MVPro Provides a highly opinionated workflow framework for Fullstack Engineering Students to complete their MVP projects. With MVPro, you can have all the functionality of Trello that you'd need to work on a solo project, and most of the tickets are either made for you, or made with a form so you don't have to try to remember what all the redundant full-stack app tickets that everyone needs are.
+MVPro is a highly opinionated workflow framework for Fullstack Engineering Students to complete their MVP projects. With MVPro, you can have all the functionality of Trello that you'd need to work on a solo project, and most of the tickets are either made for you, or made with a form so you don't have to try to remember what all the redundant full-stack app tickets that everyone needs are.
 
 ### MVP Projects are hard!
 Ever heard these thoughts in your head during an MVP Project?

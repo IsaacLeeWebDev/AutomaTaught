@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 
 const Project_Form_Step_1 = props => (
-  <Form>
+  <Form horizontal>
     <FormGroup controlId="formHorizontalDeadline">
       <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
       <Col sm={8}>
