@@ -30,7 +30,7 @@ class Project_Form extends React.Component {
       "database": '',
       "tickets": [],
       "primaryRecordName": '',
-      "primaryRecordExample" : {},
+      "primaryRecordExample" : [],
       "viewsRequired": [],
       "step": 1,
     };

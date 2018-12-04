@@ -5,23 +5,40 @@ import {
   Button, Radio, Row, Col, Form, FormGroup, FormControl, ControlLabel, Well
 } from 'react-bootstrap';
 // Components
-import Column_Form_List from 'Column_Form_List.jsx';
+import Column_Form_List from './Column_Form_List.jsx';
 
-const Project_Form_Step_3 = props => (
-  <Form>
-    <Row>
-      <FormGroup controlId="primaryRecordName">
-        <h3 componentClass={ControlLabel}> Name of your primary record:</h3>
-        <Col sm={6}>
-          <FormControl id="primaryRecordName" className="form_field" type="text" />
-        </Col>
-      </FormGroup>
-    </Row>
-    <h3>Primary Record Columns</h3>
-    <Column_Form_List />
-  </Form>
-);
+class Project_Form_Step_3 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      columns: 1,
+    };
+  }
 
+  addColumn() {
+    this.setState({columns: this.state.columns + 1});
+  }
+
+  render() {
+    return (
+      <Form>
+        <Row>
+          <FormGroup controlId="primaryRecordName">
+            <h3> Name of your primary record:</h3>
+            <Col sm={6}>
+              <FormControl id="primaryRecordName" className="form_field" type="text" />
+            </Col>
+          </FormGroup>
+        </Row>
+        <h3>Primary Record Columns</h3>
+        <Column_Form_List columns={this.state.columns} />
+        <Row>
+          <Button className="btn btn-success" onClick={this.addColumn}> Add Column </Button>
+        </Row>
+      </Form>
+    );
+  }
+}
 export default Project_Form_Step_3;
 
 
