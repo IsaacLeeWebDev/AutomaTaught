@@ -44,7 +44,7 @@ MVPro saves you from these nightmares by providing a straightforward, opinionate
       --Shi Hao, Galvanize Tech Mentor
 
   > "Wait did, you type this all out? I thought you just forked it."
-    -- Jay, Guy who was on my SDC team
+    -- Jay, a guy who was on my SDC team
 
 ### What you should do now
 
