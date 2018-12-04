@@ -12,12 +12,24 @@ class Project_Form_Step_3 extends React.Component {
     super(props);
     this.state = {
       columns: 1,
+      columnsList: [
+        {
+          name: '',
+          createdAt: '',
+          displayedAt: '',
+          location: 'columns[0]',
+          childColumns: [],
+        },
+      ],
     };
     this.addColumn = this.addColumn.bind(this);
   }
 
   addColumn() {
-    this.setState({columns: this.state.columns + 1});
+    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{location:`columns[${this.state.columns}]`, childColumns:[] }])});
+    setTimeout(() => {
+      this.props.updatePrimaryRecordExample(this.state.columnsList);
+    }, 0)
   }
 
   render() {

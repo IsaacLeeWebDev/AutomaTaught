@@ -19,6 +19,7 @@ class Column_Form extends React.Component {
 
   addSecondaryColumn() {
     this.setState({secondaryColumns: this.state.secondaryColumns + 1});
+
   }
 
   render() {
@@ -30,19 +31,6 @@ class Column_Form extends React.Component {
             <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
             <Col sm={8}>
               <FormControl id={`["columns"][${this.props.columnId}]["name"]`} className="form_field" type="text" />
-            </Col>
-          </FormGroup>
-        </Row>
-        <Row>
-          <FormGroup>
-            <Col componentClass={ControlLabel} sm={4}>Column Type</Col>
-            <Col sm={8}>
-              <Radio name={`["columns"][${this.props.columnId}]["datatype"]`} inline>
-                Value
-              </Radio>{' '}
-              <Radio name={`["columns"][${this.props.columnId}]["datatype"]`} inline>
-                Secondary Column
-              </Radio>{' '}
             </Col>
           </FormGroup>
         </Row>
