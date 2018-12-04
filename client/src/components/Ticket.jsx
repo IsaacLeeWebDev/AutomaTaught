@@ -35,11 +35,11 @@ class Ticket extends React.Component {
       <Row>
         <Col>
           <Well>
-            <h4>{props.ticket.title}</h4>
+            <h4>{this.props.ticket.title}</h4>
             <Row>
-              <p>Started: {String(props.ticket.createdAt)} </p>
-              <p>Deadline: {String(props.ticket.deadline)}</p>
-              <p>Task: {props.ticket.body} </p>
+              <p>Started: {String(this.props.ticket.createdAt)} </p>
+              <p>Deadline: {String(this.props.ticket.deadline)}</p>
+              <p>Task: {this.props.ticket.body} </p>
               <p>Completion State: {} </p>
               <a className="btn" onClick={() => changeView('Ticket_Form')}> Edit </a>
               <a id="abandoned" className="btn btn-delete"> Abandon ticket</a>
