@@ -13,6 +13,7 @@ class Project_Form_Step_3 extends React.Component {
     this.state = {
       columns: 1,
     };
+    this.addColumn = this.addColumn.bind(this);
   }
 
   addColumn() {
@@ -20,6 +21,7 @@ class Project_Form_Step_3 extends React.Component {
   }
 
   render() {
+    console.log('PROJECT FORM RENDERED-------------');
     return (
       <Form>
         <Row>
@@ -31,7 +33,7 @@ class Project_Form_Step_3 extends React.Component {
           </FormGroup>
         </Row>
         <h3>Primary Record Columns</h3>
-        <Column_Form_List columns={this.state.columns} />
+        <Column_Form_List columns={this.state.columns} parentId={'-1'}/>
         <Row>
           <Button className="btn btn-success" onClick={this.addColumn}> Add Column </Button>
         </Row>
