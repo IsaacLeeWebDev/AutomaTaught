@@ -12,17 +12,20 @@ class Column_Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
+      createdOn: '',
+      displayedOn: '',
       childColumns: 0,
-      childColumnsList: []
-    }
-    this.addSecondaryColumn = this.addSecondaryColumn.bind(this);
+      childColumnsList: [],
+    };
+    this.addChildColumn = this.addChildColumn.bind(this);
   }
 
-  addSecondaryColumn() {
+  addChildColumn() {
     this.setState({ childColumns:this.state.childColumns + 1, childColumnsList:this.state.childColumnsList.concat([{name: '', childColumnsList: [], childColumns: 0, createdOn: '', displayedOn: '' }]) });
     setTimeout(() => {
-      this.props.updatePrimaryRecordExample()
-    });
+      this.props.updateChildColumns(this.state.childColumnsList)
+    }, 0);
   }
 
   render() {
@@ -33,7 +36,7 @@ class Column_Form extends React.Component {
           <FormGroup>
             <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
             <Col sm={8}>
-              <FormControl id={`["columns"][${this.props.columnId}]["name"]`} className="form_field" type="text" onChange={this.props.handleFormChanges} />
+              <FormControl id={`[${this.props.columnId}]["name"]`} className="form_field" type="text" onChange={this.props.handleFormChanges} />
             </Col>
           </FormGroup>
         </Row>
@@ -41,10 +44,10 @@ class Column_Form extends React.Component {
           <FormGroup>
             <Col componentClass={ControlLabel} sm={4}>Created On</Col>
             <Col sm={8}>
-              <Radio name={`["columns"][${this.props.columnId}]["created_on"]`} inline>
+              <Radio name={`[${this.props.columnId}]["created_on"]`} inline>
                 Homepage
               </Radio>{' '}
-              <Radio name={`["columns"][${this.props.columnId}]["created_on"]`} inline>
+              <Radio name={`[${this.props.columnId}]["created_on"]`} inline>
                 Its own view
               </Radio>{' '}
             </Col>
@@ -54,19 +57,19 @@ class Column_Form extends React.Component {
           <FormGroup>
             <Col componentClass={ControlLabel} sm={4}>Displayed on</Col>
             <Col sm={8}>
-              <Radio name={`["columns"][${this.props.columnId}]["displayed_on"]`} inline>
+              <Radio name={`[${this.props.columnId}]["displayed_on"]`} inline>
                 Homepage
               </Radio>{' '}
-              <Radio name={`["columns"][${this.props.columnId}]["displayed_on"]`} inline>
+              <Radio name={`[${this.props.columnId}]["displayed_on"]`} inline>
                 Its own view
               </Radio>{' '}
-              <Radio name={`["columns"][${this.props.columnId}]["displayed_on"]`} inline>
+              <Radio name={`[${this.props.columnId}]["displayed_on"]`} inline>
                 Both
               </Radio>{' '}
             </Col>
           </FormGroup>
         </Row>
-        <Button onClick={this.addSecondaryColumn}>Add Child Column</Button>
+        <Button onClick={this.addChildColumn}>Add Child Column</Button>
         <Row>
           <Col smOffset={1}>
             <Column_Form_List columns={this.state.childColumns} parentId={`${this.props.columnId.slice(1, this.props.columnId.length - 1)}`} />

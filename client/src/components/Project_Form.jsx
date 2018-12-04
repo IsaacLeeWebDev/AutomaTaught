@@ -30,7 +30,14 @@ class Project_Form extends React.Component {
       "database": '',
       "tickets": [],
       "primaryRecordName": '',
-      "primaryRecordExample" : [],
+      "primaryRecordExample" : [
+        {
+          name: '',
+          createdOn: '',
+          displayedOn: '',
+          columns: [],
+        },
+      ],
       "viewsRequired": [],
       "step": 1,
     };
@@ -65,7 +72,7 @@ class Project_Form extends React.Component {
     } else if (this.state.step === 2) {
       return (<Project_Form_Step_2 handleInputChange={this.handleInputChange} newProject={this.state} />)
     } else if (this.state.step === 3) {
-      return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} updatePrimaryRecordExample={this.updatePrimaryRecordExample} />)
+      return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} primaryRecord={this.state.primaryRecordExample} updatePrimaryRecordExample={this.updatePrimaryRecordExample} />)
     } else if (this.state.step === 3) {
       return (<Project_Form_Step_4 handleInputChange={this.handleInputChange} newProject={this.state} />)
     }

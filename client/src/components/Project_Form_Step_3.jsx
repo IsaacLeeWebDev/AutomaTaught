@@ -15,18 +15,28 @@ class Project_Form_Step_3 extends React.Component {
       columnsList: [
         {
           name: '',
-          createdAt: '',
-          displayedAt: '',
+          createdOn: '',
+          displayedOn: '',
           childColumns: [],
         },
       ],
     };
     this.addColumn = this.addColumn.bind(this);
+    this.updateChildColumns = this.updateChildColumns.bind(this);
     this.handleFormChanges = this.handleFormChanges.bind(this);
   }
 
   addColumn() {
-    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{name: '', childColumns:[], displayedAt: '', createdAt: ''}])});
+    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{name: '', childColumns:[], displayedOn: '', createdOn: ''}])});
+    setTimeout(() => {
+      this.props.updatePrimaryRecordExample(this.state.columnsList);
+    }, 0)
+  }
+
+  updateChildColumns(childCols) {
+    let myCols = this.state.columnsList;
+    myCols.childColumns = childCols;
+    this.setState({ columnsList: myCols});
     setTimeout(() => {
       this.props.updatePrimaryRecordExample(this.state.columnsList);
     }, 0)
@@ -49,7 +59,13 @@ class Project_Form_Step_3 extends React.Component {
           </FormGroup>
         </Row>
         <h3>Primary Record Columns</h3>
-        <Column_Form_List columns={this.state.columns} parentId={'root'} handleFormChanges={this.handleFormChanges}/>
+        <Column_Form_List
+          columns={this.state.columns}
+          parentId={'root'}
+          handleFormChanges={this.handleFormChanges}
+          primaryRecord={this.props.primaryRecord}
+          updateChildColumns={this.updateChildColumns}
+        />
         <Row>
           <Button className="btn btn-success" onClick={this.addColumn}> Add Column </Button>
         </Row>

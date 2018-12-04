@@ -13,9 +13,23 @@ const Column_Form_List = props => {
   if (props.columns) {
     for (let i = 0; i < props.columns; i++) {
       if (props.parentId !== 'root') {
-        columnFormJSX.push((<Column_Form key={i} columnId={`[${props.parentId}][${i}]`}/>));
+        columnFormJSX.push((
+          <Column_Form
+            key={i}
+            columnId={`[${props.parentId}][${i}]`}
+            handleFormChanges={props.handleFormChanges}
+            updateChildColumns={props.updateChildColumns}
+          />
+        ));
       } else {
-        columnFormJSX.push((<Column_Form key={i} columnId={`[${i}]`}/>));
+        columnFormJSX.push((
+          <Column_Form
+            key={i}
+            columnId={`[${i}]`}
+            handleFormChanges={props.handleFormChanges}
+            updateChildColumns={props.updateChildColumns}
+          />
+        ));
       }
     }
     return columnFormJSX
