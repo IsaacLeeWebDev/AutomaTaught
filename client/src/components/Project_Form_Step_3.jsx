@@ -12,12 +12,13 @@ class Project_Form_Step_3 extends React.Component {
     super(props);
     this.state = {
       columns: 1,
-      columnsList: [
+      columnList: [
         {
           name: '',
           createdOn: '',
           displayedOn: '',
-          childColumns: [],
+          childColumns: 0,
+          childColumnList: [],
         },
       ],
     };
@@ -27,18 +28,18 @@ class Project_Form_Step_3 extends React.Component {
   }
 
   addColumn() {
-    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{name: '', childColumns:[], displayedOn: '', createdOn: ''}])});
+    this.setState({columns: this.state.columns + 1, columnList: this.state.columnList.concat([{name: '', childColumnList:[], displayedOn: '', createdOn: ''}])});
     setTimeout(() => {
-      this.props.updatePrimaryRecordExample(this.state.columnsList);
+      this.props.updatePrimaryRecordExample(this.state.columnList);
     }, 0)
   }
 
   updateChildColumns(childCols) {
-    let myCols = this.state.columnsList;
-    myCols.childColumns = childCols;
-    this.setState({ columnsList: myCols});
+    let myCols = this.state.columnList;
+    myCols.childColumnList = childCols;
+    this.setState({ columnList: myCols});
     setTimeout(() => {
-      this.props.updatePrimaryRecordExample(this.state.columnsList);
+      this.props.updatePrimaryRecordExample(this.state.columnList);
     }, 0)
   }
 
