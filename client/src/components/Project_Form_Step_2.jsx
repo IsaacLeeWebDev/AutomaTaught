@@ -97,6 +97,6 @@ export default Project_Form_Step_2;
 
 /*
 
- - [ ] a press release (See PRESS_RELEASE.md for a template)
+ - [X] a press release (See PRESS_RELEASE.md for a template)
 
 */
