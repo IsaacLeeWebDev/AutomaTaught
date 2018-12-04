@@ -17,19 +17,23 @@ class Project_Form_Step_3 extends React.Component {
           name: '',
           createdAt: '',
           displayedAt: '',
-          location: 'columns[0]',
           childColumns: [],
         },
       ],
     };
     this.addColumn = this.addColumn.bind(this);
+    this.handleFormChanges = this.handleFormChanges.bind(this);
   }
 
   addColumn() {
-    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{location:`columns[${this.state.columns}]`, childColumns:[] }])});
+    this.setState({columns: this.state.columns + 1, columnsList: this.state.columnsList.concat([{name: '', childColumns:[], displayedAt: '', createdAt: ''}])});
     setTimeout(() => {
       this.props.updatePrimaryRecordExample(this.state.columnsList);
     }, 0)
+  }
+
+  handleFormChanges(event) {
+    console.log('id:', event.target.id, 'value:', event.target.value);
   }
 
   render() {
@@ -40,12 +44,12 @@ class Project_Form_Step_3 extends React.Component {
           <FormGroup controlId="primaryRecordName">
             <h3> Name of your primary record:</h3>
             <Col sm={6}>
-              <FormControl id="primaryRecordName" className="form_field" type="text" />
+              <FormControl id="primaryRecordName" className="form_field" type="text" onChange={this.props.handleInputChange}/>
             </Col>
           </FormGroup>
         </Row>
         <h3>Primary Record Columns</h3>
-        <Column_Form_List columns={this.state.columns} parentId={'root'}/>
+        <Column_Form_List columns={this.state.columns} parentId={'root'} handleFormChanges={this.handleFormChanges}/>
         <Row>
           <Button className="btn btn-success" onClick={this.addColumn}> Add Column </Button>
         </Row>

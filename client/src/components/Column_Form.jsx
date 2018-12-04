@@ -12,14 +12,17 @@ class Column_Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secondaryColumns: 0,
+      childColumns: 0,
+      childColumnsList: []
     }
     this.addSecondaryColumn = this.addSecondaryColumn.bind(this);
   }
 
   addSecondaryColumn() {
-    this.setState({secondaryColumns: this.state.secondaryColumns + 1});
-
+    this.setState({ childColumns:this.state.childColumns + 1, childColumnsList:this.state.childColumnsList.concat([{name: '', childColumnsList: [], childColumns: 0, createdOn: '', displayedOn: '' }]) });
+    setTimeout(() => {
+      this.props.updatePrimaryRecordExample()
+    });
   }
 
   render() {
@@ -30,7 +33,7 @@ class Column_Form extends React.Component {
           <FormGroup>
             <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
             <Col sm={8}>
-              <FormControl id={`["columns"][${this.props.columnId}]["name"]`} className="form_field" type="text" />
+              <FormControl id={`["columns"][${this.props.columnId}]["name"]`} className="form_field" type="text" onChange={this.props.handleFormChanges} />
             </Col>
           </FormGroup>
         </Row>
@@ -63,10 +66,10 @@ class Column_Form extends React.Component {
             </Col>
           </FormGroup>
         </Row>
-        <Button onClick={this.addSecondaryColumn}>Add Secondary Column</Button>
+        <Button onClick={this.addSecondaryColumn}>Add Child Column</Button>
         <Row>
           <Col smOffset={1}>
-            <Column_Form_List columns={this.state.secondaryColumns} parentId={`${this.props.columnId.slice(1, this.props.columnId.length - 1)}`} />
+            <Column_Form_List columns={this.state.childColumns} parentId={`${this.props.columnId.slice(1, this.props.columnId.length - 1)}`} />
           </Col>
         </Row>
       </Row>
