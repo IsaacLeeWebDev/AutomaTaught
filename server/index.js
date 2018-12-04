@@ -20,15 +20,27 @@ app.get('/api/projects/:projectId', function (req, res) {
   .catch(err => res.sendStatus(500));
 });
 
-app.put('/api/projects/', (req, res) => {
-
-});
+// app.put('/api/projects/', (req, res) => {
+//   res.send(/*TODO*/);
+// });
 
 // app.put('/api/projects/:projectId/:ticketId', function (req, res) {
 //   Models.getProject(req.params.projectId, req.params.ticketId)
 //   .then(data => res.json(data))
 //   .catch(err => res.sendStatus(500));
 // });
+
+// app.delete('/api/projects/', (req, res) => {
+//   Models.getProject(req.params.projectId, req.params.ticketId)
+//   .then(data => res.json(data))
+//   .catch(err => res.sendStatus(500));
+// })
+
+// app.delete('/api/projects/:projectId/:ticketId', (req, res) => {
+//   Models.getProject(req.params.projectId, req.params.ticketId)
+//   .then(data => res.json(data))
+//   .catch(err => res.sendStatus(500));
+// })
 
 
 app.listen(port, function() {
