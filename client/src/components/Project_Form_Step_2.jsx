@@ -13,7 +13,7 @@ const Project_Form_Step_2 = props => (
             <p>Subtitle: </p>
           </Col>
           <Col sm={11}>
-            <FormControl id="subtitle" type="text" placeholder="A(n) <One-word description of your product> app for <1-5 word description of your audience>" />
+            <FormControl onChange={props.handleInputChange} id="subtitle" type="text" placeholder="A(n) <One-word description of your product> app for <1-5 word description of your audience>" />
           </Col>
         </FormGroup>
     </Row>
@@ -22,7 +22,7 @@ const Project_Form_Step_2 = props => (
       <p> Format suggestion: </p>
       <p>{`${props.newProject.title} is a <brief description of product> that <action verbs> so that <audience> can <acheived result>`} </p>
       <FormGroup controlId="formHorizontalDescriptionParagraph">
-        <FormControl id="appDescriptionParagraph" componentClass="textarea" />
+        <FormControl onChange={props.handleInputChange} id="appDescriptionParagraph" componentClass="textarea" />
       </FormGroup>
     </Row>
     <Row>
@@ -32,7 +32,7 @@ const Project_Form_Step_2 = props => (
           <p>Challenge Summary: </p>
         </Col>
         <Col sm={10}>
-          <FormControl id="challengeTitle" type="text" placeholder="Keep it to one sentence. Example: MVP projects are Hard!" />
+          <FormControl onChange={props.handleInputChange} id="challengeTitle" type="text" placeholder="Keep it to one sentence. Example: MVP projects are Hard!" />
         </Col>
       </FormGroup>
     </Row>
@@ -42,7 +42,7 @@ const Project_Form_Step_2 = props => (
         <p> Formatting suggestion: "Have you ever (heard/felt/thought) these things?</p>
         <p> (Big list of quotes from people who are upset that they have to deal with the problems that your app solves)</p>
         <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
-        <FormControl id="challengeParagraph" componentClass="textarea" />
+        <FormControl onChange={props.handleInputChange} id="challengeParagraph" componentClass="textarea" />
       </FormGroup>
     </Row>
     <Row>
@@ -51,7 +51,43 @@ const Project_Form_Step_2 = props => (
         <p> Formatting suggestion: "Have you ever (heard/felt/thought) these things?</p>
         <p> (Big list of quotes from people who are upset that they have to deal with the problems that your app solves)</p>
         <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
-        <FormControl id="quoteFromCreator" componentClass="textarea" />
+        <FormControl onChange={props.handleInputChange} id="quoteFromCreator" componentClass="textarea" />
+      </FormGroup>
+    </Row>
+    <Row>
+      <FormGroup controlId="howToGetSteps">
+        <h2>How to get {props.newProject.title} </h2>
+        <p> Formatting suggestion:</p>
+        <p>How to get {props.newProject.title}:</p>
+        <p> 1. clone this repo </p>
+        <p> 2. run npm install </p>
+        <p> 3. run npm build </p>
+        <p> 4. run npm start </p>
+        <p> 5. open browser and go to localhost:3000 </p>
+        <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
+        <FormControl onChange={props.handleInputChange} id="howToGetSteps" componentClass="textarea" />
+      </FormGroup>
+    </Row>
+    <Row>
+      <FormGroup controlId="whatPeopleAreSaying">
+        <h2>What people are saying section: </h2>
+        <p> Formatting suggestion:</p>
+        <p> What people are saying: </p>
+        <p> "Cool. Looks good." </p>
+        <p> --Shi Hao, Galvanize Tech Mento </p>
+        <p> "Wait, did you type all this out? I thought you just forked it." </p>
+        <p> --Jay, a guy who was on my SDC Team </p>
+        <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
+        <FormControl onChange={props.handleInputChange} id="whatPeopleAreSaying" componentClass="textarea" />
+      </FormGroup>
+    </Row>
+    <Row>
+      <FormGroup controlId="callToAction">
+        <h2>Call to Action section: </h2>
+        <p> Formatting suggestion:</p>
+        <p> What you should do now: </p>
+        <p> You probably already know this, but like, please go fork and clone this repo and then donate lots of money to my Venmo account or something.</p>
+        <FormControl onChange={props.handleInputChange} id="callToAction" componentClass="textarea" />
       </FormGroup>
     </Row>
   </Form>
