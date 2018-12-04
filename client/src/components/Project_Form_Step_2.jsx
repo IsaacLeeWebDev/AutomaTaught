@@ -13,7 +13,7 @@ const Project_Form_Step_2 = props => (
             <p>Subtitle: </p>
           </Col>
           <Col sm={11}>
-            <FormControl type="text" placeholder="A(n) <One-word description of your product> app for <1-5 word description of your audience>" />
+            <FormControl id="subtitle" type="text" placeholder="A(n) <One-word description of your product> app for <1-5 word description of your audience>" />
           </Col>
         </FormGroup>
     </Row>
@@ -21,27 +21,37 @@ const Project_Form_Step_2 = props => (
       <h2> What does {props.newProject.title} do? </h2>
       <p> Format suggestion: </p>
       <p>{`${props.newProject.title} is a <brief description of product> that <action verbs> so that <audience> can <acheived result>`} </p>
-      <FormGroup controlId="formHorizontalAudience">
-        <FormControl componentClass="textarea" />
+      <FormGroup controlId="formHorizontalDescriptionParagraph">
+        <FormControl id="appDescriptionParagraph" componentClass="textarea" />
       </FormGroup>
     </Row>
     <Row>
-      <h2>The problem that {props.newProject.title} solves </h2>
+      <h2>The problem that {props.newProject.title} solves: </h2>
       <FormGroup controlId="formHorizontalChallengeSummary">
-        <Col componentClass={ControlLabel} sm={1}>
+        <Col componentClass={ControlLabel} sm={2}>
           <p>Challenge Summary: </p>
         </Col>
-        <Col sm={11}>
-          <FormControl type="text" placeholder="Keep it to one sentence. Example: MVP projects are Hard!" />
+        <Col sm={10}>
+          <FormControl id="challengeTitle" type="text" placeholder="Keep it to one sentence. Example: MVP projects are Hard!" />
         </Col>
       </FormGroup>
+    </Row>
+    <Row>
       <FormGroup controlId="formHorizontalAngryPeopleQuotes">
-        <Col componentClass={ControlLabel} sm={1}>
-          <p>Challenge Summary: </p>
-        </Col>
-        <Col sm={11}>
-          <FormControl type="text" placeholder="Keep it to one sentence. Example: MVP projects are Hard!" />
-        </Col>
+        <h2> Is this you? </h2>
+        <p> Formatting suggestion: "Have you ever (heard/felt/thought) these things?</p>
+        <p> (Big list of quotes from people who are upset that they have to deal with the problems that your app solves)</p>
+        <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
+        <FormControl id="challengeParagraph" componentClass="textarea" />
+      </FormGroup>
+    </Row>
+    <Row>
+      <FormGroup controlId="quoteFromCreator">
+        <h2>A Quote from you</h2>
+        <p> Formatting suggestion: "Have you ever (heard/felt/thought) these things?</p>
+        <p> (Big list of quotes from people who are upset that they have to deal with the problems that your app solves)</p>
+        <p> {props.newProject.title} solves this problem by (action verbs) resulting in (result achieved)</p>
+        <FormControl id="quoteFromCreator" componentClass="textarea" />
       </FormGroup>
     </Row>
   </Form>
