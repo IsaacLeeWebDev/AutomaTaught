@@ -1,5 +1,5 @@
 body {
-  background-color: #100;
+  background-color: #111;
   color: #fff;
 }
 
@@ -17,14 +17,14 @@ h1 {
 
 .well {
   border-radius: 0;
-  border-color: #100;
-  background-color: #100;
+  border-color: #111;
+  background-color: #111;
 }
 
 .project_li {
   color: #ddd;
-  background-color: black;
-  border-color: black;
+  background-color: #100;
+  border-color: #100;
 }
 
 .project_li:hover {
@@ -33,27 +33,27 @@ h1 {
 }
 
 .project_li_details {
-  background-color: black;
-  border-color: black;
+  background-color: #100;
+  border-color: #100;
 }
 
 .project_li_details_well {
-  background-color: #100;
+  background-color: #111;
 }
 
 .project_dashboard {
-  !background-color: #100
+  !background-color: #111
 }
 
 .btn {
   color: #fff;
-  background-color: #100;
+  background-color: #111;
   border-color: #baefff;
 }
 
 .btn:hover {
   color: #fff;
-  background-color: #100;
+  background-color: #111;
   border-color: #aaffaa;
 }
 
