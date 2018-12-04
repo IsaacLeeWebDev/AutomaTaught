@@ -33,7 +33,7 @@ class Project_Form_Step_3 extends React.Component {
           </FormGroup>
         </Row>
         <h3>Primary Record Columns</h3>
-        <Column_Form_List columns={this.state.columns} parentId={'-1'}/>
+        <Column_Form_List columns={this.state.columns} parentId={'root'}/>
         <Row>
           <Button className="btn btn-success" onClick={this.addColumn}> Add Column </Button>
         </Row>

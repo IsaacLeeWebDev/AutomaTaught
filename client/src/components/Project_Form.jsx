@@ -36,6 +36,7 @@ class Project_Form extends React.Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.addColToPrimaryRecordExample = this.addColToPrimaryRecordExample.bind(this);
     this.renderProjectFormStep = this.renderProjectFormStep.bind(this);
     this.progressFormStep = this.progressFormStep.bind(this);
     this.regressFormStep = this.regressFormStep.bind(this);
@@ -64,10 +65,14 @@ class Project_Form extends React.Component {
     } else if (this.state.step === 2) {
       return (<Project_Form_Step_2 handleInputChange={this.handleInputChange} newProject={this.state} />)
     } else if (this.state.step === 3) {
-      return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} />)
+      return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} addColToPrimaryRecordExample={this.addColToPrimaryRecordExample} />)
     } else if (this.state.step === 3) {
       return (<Project_Form_Step_4 handleInputChange={this.handleInputChange} newProject={this.state} />)
     }
+  }
+
+  addColToPrimaryRecordExample() {
+
   }
 
   render() {

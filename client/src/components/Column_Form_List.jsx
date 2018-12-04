@@ -12,11 +12,10 @@ const Column_Form_List = props => {
   let columnFormJSX = [];
   if (props.columns) {
     for (let i = 0; i < props.columns; i++) {
-      console.log(parseInt(props.parentId.split('').pop()));
-      if (parseInt(props.parentId.split('').pop()) >= 0) {
-        columnFormJSX.push((<Column_Form key={i} columnId={`${props.parentId}_${i}`}/>));
+      if (props.parentId !== 'root') {
+        columnFormJSX.push((<Column_Form key={i} columnId={`[${props.parentId}][${i}]`}/>));
       } else {
-        columnFormJSX.push((<Column_Form key={i} columnId={`${i}`}/>));
+        columnFormJSX.push((<Column_Form key={i} columnId={`[${i}]`}/>));
       }
     }
     return columnFormJSX
