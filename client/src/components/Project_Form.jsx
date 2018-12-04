@@ -12,31 +12,29 @@ import Project_Form_Step_3 from './Project_Form_Step_3.jsx';
 class Project_Form extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      newProject: {
-        "_id": props.projects.length,
-        "createdAt": '',
-        "deadline": '',
-        "pressReleaseDetails": {
-          "title": '',
-          "subtitle": '',
-          "appDescriptionParagraph": '',
-          "hypotheticalComplaints1": '',
-          "hypotheticalComplaints2": '',
-          "hypotheticalComplaints3": '',
-          "appSolutionPitch": '',
-          "quoteFromCreator": '',
-          "howToGetSteps": [],
-          "whatPeopleAreSaying": '',
-          "callToAction": '',
-        },
-        "database": '',
-        "tickets": [],
-        "primaryRecordExample" : {},
-        "viewsRequired": [],
-      },
-      step: 1,
+      "_id": props.projects.length,
+      "createdAt": '',
+      "deadline": '',
+      "title": '',
+      "subtitle": '',
+      "appDescriptionParagraph": '',
+      "hypotheticalComplaints1": '',
+      "hypotheticalComplaints2": '',
+      "hypotheticalComplaints3": '',
+      "appSolutionPitch": '',
+      "quoteFromCreator": '',
+      "howToGetSteps": [],
+      "whatPeopleAreSaying": '',
+      "callToAction": '',
+      "database": '',
+      "tickets": [],
+      "primaryRecordExample" : {},
+      "viewsRequired": [],
+      "step": 1,
     };
+
     this.handleInputChange = this.handleInputChange.bind(this);
     this.renderProjectFormStep = this.renderProjectFormStep.bind(this);
     this.progressFormStep = this.progressFormStep.bind(this);
@@ -44,8 +42,8 @@ class Project_Form extends React.Component {
   }
 
   handleInputChange(event) {
-    // event.target.id is the name of the state
-    // event.target.value is the value to set it to
+    console.log('input changed:\t', event.target.id, '\tvalue:\t', event.target.value);
+    this.setState({ [event.target.id]: event.target.value });
   }
 
   progressFormStep() {
@@ -56,13 +54,17 @@ class Project_Form extends React.Component {
     this.setState({step: this.state.step - 1})
   }
 
+  submitForm() {
+    $.ajax('/api/')
+  }
+
   renderProjectFormStep() {
     if (this.state.step === 1) {
-      return (<Project_Form_Step_1 />)
+      return (<Project_Form_Step_1 handleInputChange={this.handleInputChange} newProject={this.state} />)
     } else if (this.state.step === 2) {
-      return (<Project_Form_Step_2 />)
+      return (<Project_Form_Step_2 handleInputChange={this.handleInputChange} newProject={this.state} />)
     } else if (this.state.step === 3) {
-      return (<Project_Form_Step_3 />)
+      return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} />)
     }
   }
 
@@ -93,10 +95,23 @@ class Project_Form extends React.Component {
 export default Project_Form;
 
 /*
+
+  Requirements:
+  - [X] three Form Step views
+  - [X] a method which handles all input changes by id and value
+  - [X] a way to paginate through the Form views
+  - [ ] a way to submit them to the server at the end
+
+*/
+
+/*
+
 Stretch Goals: -------------------------
 
   > Form validation
   > Personalized look
     - Just the View content. #101 is bae
     - Ticket color based on Completion State, Ticket Size, Time remaining
+
 */
+

@@ -71,54 +71,17 @@
 
 - [ ] ITERATION 3: MVPut NEW PROJECT ------------------------------
   - [ ] client/src/components
-    - [ ] implement a form that builds a new project, which includes:
-      - [X] a deadline
-      - [ ] a press release
-      - [ ] What tech choices the user makes
-        - [ ] Database Selection
-          - [ ] Ask whether or not bad read/write consistency would result in imprisonment
-            - [ ] If so, ask whether or not they know Postgres
-              - [ ] If so, they get Postgres
-              - [ ] If not, they get MySQL
-            - [ ] If not, they get MongoDB
-      - [ ] Primary Record:
-        - [ ] Add columns
-          - [ ] Name:
-          - [ ] Datatype: (one of int, string, date, boolean, or secondary record)
-            - [ ] if secondary record
-              - [ ] Like a List of things, or Like an object with properties?
-              - [ ] recurse Add columns
-        - [ ] should create a json object representing a primary record.
-        - [ ] How is primary record created?
-          - [ ] Submiting a form which belongs to a unique view
-          - [ ] Triggering a non-form-related event
-        - [ ] Should app have a homepage? (+1 view)
-          - [ ] views.push('homepage_view)')
-        - [ ] Where is the primary record displayed?
-          - [ ] On the homepage
-          - [ ] in a list, like a feed or list of profiles
-            - [ ] views.push(list_name)
-          - [ ] in its own view, like a map search result
-            - [ ] views.push(list_item_name)
-          - [ ] list & view but not homepage
-            - [ ] views.push(list_name, list_item_name)
-          - [ ] in a wizard
-            - [ ] How many views/pages in the wizard?
-            - [ ] veiws.concat([...wizard-pages/veiws])
-
-    - [ ] New file: Create_Projects_Form
-      - [ ] test PUT project from the front end
-      - [ ] test PUT ticket from the front end
+    - [ ] New File: Project_Form.jsx
+      - [ ] implement a form that builds a new project, which includes all details in Project_Form.jsx:
+  - [ ] server/index.js
+    - [ ] Finish PUT project
+    - [ ] Outline PUT ticket
   - [ ] database/
     - [ ] index.js
       - [ ] update schema to make sure that all fields are properly included:
-      - [ ] Finish PUT project
-      - [ ] Outline PUT ticket
+      - [ ] Finish PUT project model code
+      - [ ] Outline PUT ticket model code
       - [ ] test PUT project through Postman
-  - [ ] server/
-    - [ ] Create the following routes:
-      - [ ] Finish PUT project
-      - [ ] Outline PUT ticket
   - [ ] client/src/components
     - [ ] test PUT project from the front end
     - [ ] test PUT ticket from the front end
@@ -138,7 +101,21 @@
     - [ ] test PUT project from the front end
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut Secondary_1 ------------------------------
+- [ ] ITERATION 3: MVPut new ticket ------------------------------
+  - [ ] database/
+    - [ ] index.js
+      - [ ] Finish PUT ticket
+      - [ ] Outline DELETE project
+  - [ ] server/
+    - [ ] Create the following routes:
+      - [ ] Finish PUT /api/:projectId/:ticketId
+      - [ ] Outline DELETE project /api/:projectId/:ticketId
+  - [ ] client/src/components
+    - [ ] Add an edit button to your projects
+    - [ ] Add an edit button to your tickets
+    - [ ] test PUT ticket from the front end
+
+- [ ] ITERATION 3: MVPut existing ticket ------------------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT ticket
