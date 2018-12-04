@@ -1,70 +1,24 @@
+// Packages
 import React from 'react';
 import $ from 'jquery';
 import {
-  Row, Col, Form, FormGroup, FormControl, ControlLabel, Well
+  Button, Radio, Row, Col, Form, FormGroup, FormControl, ControlLabel, Well
 } from 'react-bootstrap';
+// Components
+import Column_Form_List from 'Column_Form_List.jsx';
 
 const Project_Form_Step_3 = props => (
   <Form>
-    <FormGroup controlId="primaryRecordName">
-      <h3 componentClass={ControlLabel}> Name of your primary record:</h3>
-      <Col sm={6}>
-        <FormControl id="primaryRecordName" className="form_field" type="text" />
-      </Col>
-    </FormGroup>
-    <FormGroup controlId="column_0_name">
-      <Row>
-        <h3>Primary Record Columns</h3>
-        <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
-        <Col sm={8}>
-          <FormControl id="column_0_name" className="form_field" type="text" />
+    <Row>
+      <FormGroup controlId="primaryRecordName">
+        <h3 componentClass={ControlLabel}> Name of your primary record:</h3>
+        <Col sm={6}>
+          <FormControl id="primaryRecordName" className="form_field" type="text" />
         </Col>
-      </Row>
-      <Row>
-        <Col componentClass={ControlLabel} sm={4}>Column Type</Col>
-        <Col sm={8}>
-          <Radio name="column_0_datatype" inline>
-            Value
-          </Radio>{' '}
-          <Radio name="column_0_datatype" inline>
-            Secondary Column
-          </Radio>{' '}
-        </Col>
-      </Row>
-      <Row>
-        <Col componentClass={ControlLabel} sm={4}>Created On</Col>
-        <Col sm={8}>
-          <Radio name="column_0_datatype" inline>
-            Homepage
-          </Radio>{' '}
-          <Radio name="column_0_datatype" inline>
-            Its own view
-          </Radio>{' '}
-        </Col>
-      </Row>
-      <Row>
-        <Col componentClass={ControlLabel} sm={4}>Displayed on</Col>
-        <Col sm={8}>
-          <Radio name="column_0_datatype" inline>
-            Homepage
-          </Radio>{' '}
-          <Radio name="column_0_datatype" inline>
-            Its own view
-          </Radio>{' '}
-          <Radio name="column_0_datatype" inline>
-            Both
-          </Radio>{' '}
-        </Col>
-      </Row>
-    </FormGroup>
-    <FormGroup controlId="primaryRecordColumnDataType">
-      <h3>Primary Record Columns</h3>
-      <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
-      <Col sm={8}>
-        <FormControl id="columnName_1" className="form_field" type="text" />
-      </Col>
-    </FormGroup>
-    <Button> Add Column </Button>
+      </FormGroup>
+    </Row>
+    <h3>Primary Record Columns</h3>
+    <Column_Form_List />
   </Form>
 );
 
