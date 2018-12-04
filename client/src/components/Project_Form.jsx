@@ -8,6 +8,7 @@ import {
 import Project_Form_Step_1 from './Project_Form_Step_1.jsx';
 import Project_Form_Step_2 from './Project_Form_Step_2.jsx';
 import Project_Form_Step_3 from './Project_Form_Step_3.jsx';
+import Project_Form_Step_4 from './Project_Form_Step_4.jsx';
 
 class Project_Form extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Project_Form extends React.Component {
       "callToAction": '',
       "database": '',
       "tickets": [],
+      "primaryRecordName": '',
       "primaryRecordExample" : {},
       "viewsRequired": [],
       "step": 1,
@@ -63,6 +65,8 @@ class Project_Form extends React.Component {
       return (<Project_Form_Step_2 handleInputChange={this.handleInputChange} newProject={this.state} />)
     } else if (this.state.step === 3) {
       return (<Project_Form_Step_3 handleInputChange={this.handleInputChange} newProject={this.state} />)
+    } else if (this.state.step === 3) {
+      return (<Project_Form_Step_4 handleInputChange={this.handleInputChange} newProject={this.state} />)
     }
   }
 
@@ -77,10 +81,10 @@ class Project_Form extends React.Component {
         <Row>
           <Pager>
             <Pager.Item previous href="#" onClick={this.regressFormStep}>
-              &larr; Previous Page
+              &larr; Previous Step
             </Pager.Item>
             <Pager.Item next href="#" onClick={this.progressFormStep}>
-              Next Page &rarr;
+              Next Step &rarr;
             </Pager.Item>
           </Pager>
         </Row>
