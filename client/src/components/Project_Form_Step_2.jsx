@@ -5,21 +5,25 @@ import {
 } from 'react-bootstrap';
 
 const Project_Form_Step_2 = props => (
-  <Form>
-    <h2>Your App's Press Release </h2>
-    <FormGroup controlId="formHorizontalDeadline">
-      <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
-      <Col sm={8}>
-        <FormControl id="deadline" className="form_field" type="datetime-local" />
-      </Col>
-    </FormGroup>
-    <FormGroup controlId="formHorizontalTitle">
-      <Col componentClass={ControlLabel} sm={4}>What is this project called?</Col>
-      <Col sm={8}>
-        <FormControl id="title" className="form_field" />
-      </Col>
-    </FormGroup>
+  <Form inline>
+    <Row>
+      <h1>Your App's Press Release </h1>
+      <FormGroup controlId="formInlineSubtitle_1">
+        {props.newProject.title}: a(n)
+        <FormControl type="text" placeholder="One-word description of your app" />
+      </FormGroup>
+      <FormGroup controlId="formInlineAudience">
+        app for
+        <FormControl type="text" placeholder="1-5 word description of your audience" />
+      </FormGroup>
+    </Row>
   </Form>
 );
 
 export default Project_Form_Step_2;
+
+/*
+
+ - [ ] a press release (See PRESS_RELEASE.md for a template)
+
+*/
