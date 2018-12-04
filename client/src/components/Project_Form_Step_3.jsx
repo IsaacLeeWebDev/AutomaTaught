@@ -6,19 +6,66 @@ import {
 
 const Project_Form_Step_3 = props => (
   <Form>
-    <FormGroup controlId="formHorizontalDeadline">
-      <Col componentClass={ControlLabel} sm={4}>When is your deadline?</Col>
-      <Col sm={8}>
-        <FormControl id="deadline" className="form_field" type="datetime-local" />
+    <FormGroup controlId="primaryRecordName">
+      <h3 componentClass={ControlLabel}> Name of your primary record:</h3>
+      <Col sm={6}>
+        <FormControl id="primaryRecordName" className="form_field" type="text" />
       </Col>
     </FormGroup>
-    <FormGroup controlId="formHorizontalTitle">
-      <Col componentClass={ControlLabel} sm={4}>What is this project called?</Col>
+    <FormGroup controlId="column_0_name">
+      <Row>
+        <h3>Primary Record Columns</h3>
+        <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
+        <Col sm={8}>
+          <FormControl id="column_0_name" className="form_field" type="text" />
+        </Col>
+      </Row>
+      <Row>
+        <Col componentClass={ControlLabel} sm={4}>Column Type</Col>
+        <Col sm={8}>
+          <Radio name="column_0_datatype" inline>
+            Value
+          </Radio>{' '}
+          <Radio name="column_0_datatype" inline>
+            Secondary Column
+          </Radio>{' '}
+        </Col>
+      </Row>
+      <Row>
+        <Col componentClass={ControlLabel} sm={4}>Created On</Col>
+        <Col sm={8}>
+          <Radio name="column_0_datatype" inline>
+            Homepage
+          </Radio>{' '}
+          <Radio name="column_0_datatype" inline>
+            Its own view
+          </Radio>{' '}
+        </Col>
+      </Row>
+      <Row>
+        <Col componentClass={ControlLabel} sm={4}>Displayed on</Col>
+        <Col sm={8}>
+          <Radio name="column_0_datatype" inline>
+            Homepage
+          </Radio>{' '}
+          <Radio name="column_0_datatype" inline>
+            Its own view
+          </Radio>{' '}
+          <Radio name="column_0_datatype" inline>
+            Both
+          </Radio>{' '}
+        </Col>
+      </Row>
+    </FormGroup>
+    <FormGroup controlId="primaryRecordColumnDataType">
+      <h3>Primary Record Columns</h3>
+      <Col componentClass={ControlLabel} sm={4}>Column Name</Col>
       <Col sm={8}>
-        <FormControl id="title" className="form_field" />
+        <FormControl id="columnName_1" className="form_field" type="text" />
       </Col>
     </FormGroup>
-    </Form>
+    <Button> Add Column </Button>
+  </Form>
 );
 
 export default Project_Form_Step_3;
@@ -26,22 +73,15 @@ export default Project_Form_Step_3;
 
 /*
 
-  - [ ] Detail the tech choices and datashape
-    - [ ] What tech choices the user makes
-      - [ ] Database Selection
-        - [ ] Ask whether or not bad read/write consistency would result in imprisonment
-          - [ ] If so, ask whether or not they know Postgres
-            - [ ] If so, they get Postgres
-            - [ ] If not, they get MySQL
-          - [ ] If not, they get MongoDB
     - [ ] Primary Record:
       - [ ] Add columns
-        - [ ] Name:
-        - [ ] Datatype: (one of int, string, date, boolean, or secondary record)
+        - [X] Name:
+        - [X] Datatype: (one value, or secondary record)
           - [ ] if secondary record
-            - [ ] Like a List of things, or Like an object with properties?
             - [ ] recurse Add columns
-      - [ ] should create a json object representing a primary record.
+            - [ ] How is secondary record created?
+            - [ ] Submiting a form which belongs to a unique view
+            - [ ] Triggering a non-form-related event
       - [ ] How is primary record created?
         - [ ] Submiting a form which belongs to a unique view
         - [ ] Triggering a non-form-related event
@@ -57,6 +97,6 @@ export default Project_Form_Step_3;
           - [ ] views.push(list_name, list_item_name)
         - [ ] in a wizard
           - [ ] How many views/pages in the wizard?
-          - [ ] veiws.concat([...wizard-pages/veiws])
+          - [ ] views.concat([...wizard-pages/views])
 
 */
