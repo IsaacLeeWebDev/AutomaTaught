@@ -1,5 +1,4 @@
 // Packages
-// Packages
 import React from 'react';
 import $ from 'jquery';
 import {
@@ -24,6 +23,7 @@ class Column_Form extends React.Component {
   addChildColumn() {
     this.setState({ childColumns:this.state.childColumns + 1, childColumnsList:this.state.childColumnsList.concat([{name: '', childColumnsList: [], childColumns: 0, createdOn: '', displayedOn: '' }]) });
     setTimeout(() => {
+      console.log('Column Form addChild setTimeout cols:', this.state.childColumnList)
       this.props.updateChildColumns(this.state.childColumnsList)
     }, 0);
   }
@@ -72,7 +72,7 @@ class Column_Form extends React.Component {
         <Button onClick={this.addChildColumn}>Add Child Column</Button>
         <Row>
           <Col smOffset={1}>
-            <Column_Form_List columns={this.state.childColumns} parentId={`${this.props.columnId.slice(1, this.props.columnId.length - 1)}`} />
+            <Column_Form_List columns={this.state.childColumns} parentId={`${this.props.columnId.slice(1, this.props.columnId.length - 1)}`} addChildColumn={this.addChildColumn} />
           </Col>
         </Row>
       </Row>

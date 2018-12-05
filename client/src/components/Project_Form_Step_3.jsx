@@ -10,20 +10,7 @@ import Column_Form_List from './Column_Form_List.jsx';
 class Project_Form_Step_3 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      columns: 1,
-      columnList: [
-        {
-          name: '',
-          createdOn: '',
-          displayedOn: '',
-          childColumns: 0,
-          childColumnList: [],
-        },
-      ],
-    };
     this.addColumn = this.addColumn.bind(this);
-    this.updateChildColumns = this.updateChildColumns.bind(this);
     this.handleFormChanges = this.handleFormChanges.bind(this);
   }
 
@@ -34,21 +21,11 @@ class Project_Form_Step_3 extends React.Component {
     }, 0)
   }
 
-  updateChildColumns(childCols) {
-    let myCols = this.state.columnList;
-    myCols.childColumnList = childCols;
-    this.setState({ columnList: myCols});
-    setTimeout(() => {
-      this.props.updatePrimaryRecordExample(this.state.columnList);
-    }, 0)
-  }
-
   handleFormChanges(event) {
     console.log('id:', event.target.id, 'value:', event.target.value);
   }
 
   render() {
-    console.log('PROJECT FORM RENDERED-------------');
     return (
       <Form>
         <Row>

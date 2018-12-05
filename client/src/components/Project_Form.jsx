@@ -35,8 +35,8 @@ class Project_Form extends React.Component {
           name: '',
           createdOn: '',
           displayedOn: '',
-          columns: 1,
-          columnList: [],
+          childColumns: 0,
+          childColumnList: [],
         },
       ],
       "viewsRequired": [],
@@ -80,6 +80,7 @@ class Project_Form extends React.Component {
   }
 
   updatePrimaryRecordExample(columnList) {
+    console.log('updatePrimary columnList', columnList)
     this.setState({primaryRecordExample: columnList});
   }
 

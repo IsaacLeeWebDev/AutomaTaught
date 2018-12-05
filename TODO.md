@@ -70,9 +70,9 @@
     - [X] Test if renderView works
 
 - [ ] ITERATION 3: MVPut NEW PROJECT ------------------------------
-  - [ ] client/src/components
-    - [ ] New File: Project_Form.jsx
-      - [ ] implement a form that builds a new project, which includes all details in Project_Form.jsx:
+  - [X] client/src/components
+    - [X] New File: Project_Form.jsx
+      - [X] implement a form that builds a new project, which includes all details in Project_Form.jsx:
   - [ ] server/index.js
     - [ ] Finish PUT project
     - [ ] Outline PUT ticket
@@ -86,7 +86,7 @@
     - [ ] test PUT project from the front end
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut update existing project -------------------
+- [ ] ITERATION 4: MVPut update existing project -------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT project
@@ -101,7 +101,7 @@
     - [ ] test PUT project from the front end
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut new ticket ------------------------------
+- [ ] ITERATION 5: MVPut new ticket ------------------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT ticket
@@ -115,7 +115,7 @@
     - [ ] Add an edit button to your tickets
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 3: MVPut existing ticket ------------------------------
+- [ ] ITERATION 6: MVPut existing ticket ------------------------------
   - [ ] database/
     - [ ] index.js
       - [ ] Finish PUT ticket
@@ -129,7 +129,7 @@
     - [ ] Add an edit button to your tickets
     - [ ] test PUT ticket from the front end
 
-- [ ] ITERATION 4: MVP DELETE --------------------------------------
+- [ ] ITERATION 7: MVP DELETE --------------------------------------
   - [ ] ITERATRION 4a: MVPrimary DELETE
     - [ ] database/
       - [ ] index.js
@@ -149,7 +149,7 @@
       - [ ] Add a delete button to tickets
       - [ ] test delete projects from the front end
 
-- [ ] ITERATION 5: MVPollishing --------------------------------------
+- [ ] ITERATION 8: MVPollishing --------------------------------------
   - [ ] Add justification to all your tickets
   - [ ] Give everything a solid refactor.
     - [ ] client/

@@ -8,7 +8,6 @@ import {
 import Column_Form from './Column_Form.jsx';
 
 const Column_Form_List = props => {
-  console.log('List parentId', props.parentId);
   let columnFormJSX = [];
   if (props.columns) {
     for (let i = 0; i < props.columns; i++) {
